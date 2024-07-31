@@ -28,3 +28,66 @@ Sync with Upstream: If you are working on a fork of a repository, regularly sync
 10. Be Inclusive and Respectful
 Encourage Contributions: Foster an inclusive environment where all team members feel comfortable contributing and sharing their ideas.
 Respect Different Perspectives: Value diverse opinions and approaches to problem-solving, which can lead to better outcomes.
+
+
+
+
+
+
+
+
+
+
+Answer
+Here are some commonly used Git branch commands:
+Create a new branch:
+bash
+git branch <branch-name>
+
+This creates a new branch with the specified name.
+Switch to an existing branch:
+bash
+git checkout <branch-name>
+
+This switches to the specified branch.
+Create a new branch and switch to it:
+bash
+git checkout -b <branch-name>
+
+This creates a new branch and immediately switches to it.
+List all local branches:
+bash
+git branch
+
+This lists all the local branches in the current repository.
+List all local and remote branches:
+bash
+git branch -a
+
+This lists all the local and remote branches.
+Rename a branch:
+bash
+git branch -m <old-branch-name> <new-branch-name>
+
+This renames the specified branch.
+Delete a local branch:
+bash
+git branch -d <branch-name>
+
+This deletes the specified local branch. Use -D for a forced delete.
+Delete a remote branch:
+bash
+git push origin --delete <branch-name>
+
+This deletes the specified remote branch.
+Merge a branch into the current branch:
+bash
+git merge <branch-name>
+
+This merges the specified branch into the current branch.
+Show the currently active branch:
+bash
+git rev-parse --abbrev-ref HEAD
+
+This shows the name of the currently active branch.
+These are some of the most commonly used Git branch commands. Remember to replace <branch-name> with the actual name of the branch you want to use.
