@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css"
 import Home from './components/Home'
@@ -7,11 +8,18 @@ import Navbar from './components/Navbar'
 import Host from './components/Host/Dashboard'
 import Login from './components/Login'
 import About from './components/About.jsx'
+=======
+import './App.css'
+
+
+function App() {
+>>>>>>> About-Intro
 
 const App = () => {
   return (
     <>
-      <Router>
+<<<<<<< HEAD
+      <>
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -21,7 +29,8 @@ const App = () => {
           <Route path="/Login" element={<Login />} />
         </Routes>
         <Footer />
-      </Router>
+=======
+>>>>>>> About-Intro
     </>
   )
 }
