@@ -1,26 +1,29 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
-import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css"
+import Home from './components/Home'
+import Footer from './components/Footer';
+import Vans from './components/Vans'
 import Navbar from './components/Navbar'
-import Home from './components/Home.jsx'
-import LogIn from './components/LogIn.jsx'
-import React from 'react'
-import { Link } from "react-router-dom"
-
-
+import Host from './components/Host/Dashboard'
+import Login from './components/Login'
+import About from './components/About.jsx'
 
 const App = () => {
   return (
-    <Router>
-   <Navbar />
-   <Routes>
-     <Route exact path="/" element={<Home/>} />
-     <Route path="/Host" element={<Host/>} />
-     <Route exact path="/Vans" element={<Vans/>} />
-     <Route path="/LogIn" element={<LogIn/>} />
-   </Routes>
-   <Footer/>
- </Router>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/Host" element={<Host />} />
+          <Route path="/About" element={<About />} />
+          <Route exact path="/Vans" element={<Vans />} />
+          <Route path="/Login" element={<Login />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </>
   )
 }
 
-export default App
+export default App;
