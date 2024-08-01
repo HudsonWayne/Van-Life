@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
-import Home from "./../src/assets/components/Home/Home"
+import Home from ""
 
 function App() {
   return (
