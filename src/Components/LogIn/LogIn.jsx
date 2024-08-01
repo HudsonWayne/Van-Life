@@ -32,7 +32,7 @@ const SignInForm = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="p-6 rounded shadow-md w-full max-w-md bg-[#FFF7EB] pt-[4rem] pb-[4rem]">
+      <div className="p-6 rounded-lg shadow-md w-full max-w-md bg-[#FFF7EB] pt-[4rem] pb-[4rem]">
         <h2 className="text-3xl font-bold mb-4 text-center">
           Sign In To Your Account
         </h2>

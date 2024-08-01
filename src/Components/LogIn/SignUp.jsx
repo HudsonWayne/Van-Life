@@ -23,7 +23,7 @@ const SignUpForm = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <form
         onSubmit={handleSubmit}
-        className="p-6 bg-[#FFF7EB] rounded shadow-md w-80 w-full max-w-md"
+        className="p-6 bg-[#FFF7EB] rounded-lg shadow-md w-80 w-full max-w-md"
       >
         <h2 className="mb-4 text-2xl font-bold text-center">Sign Up</h2>
         <div className="mb-4">

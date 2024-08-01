@@ -1,3 +1,5 @@
+import React from 'react';
+
 const data = [
   { label: "Ju", value: 3000 },
   { label: "Au", value: 4000 },
@@ -9,12 +11,24 @@ const data = [
 
 const maxValue = 5000;
 
+const money = [
+    { text: "$720", date: "1/12/22 "},
+    { text: "$560", date: "10/11/22" },
+    { text: "$980", date: "23/11/22" },
+]
+
 const BarGraph = () => {
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md w-[500px] mx-auto mb-12 mt-12">
-      <h2 className="mb-4 text-2xl font-bold text-center">Income</h2>
+    <div className="p-6 bg-[#FFF7ED] rounded-lg shadow-md w-[500px] mx-auto mb-12 mt-12">
+      <div className="flex gap-4 flex-col pl-7 justify-center w-full min-h-[200px] ">
+        <h2 className=" text-2xl font-bold">Income</h2>
+        <p>
+          Last <span className="underline">30 days</span>
+        </p>
+        <h1 className="text-4xl font-bold mb-4">$2,260</h1>
+      </div>
       <div className="relative flex flex-col items-center w-full h-64">
-        {/* Y-axis labels and dotted lines */}
+        {/* Y-axis labels and dashed lines */}
         <div className="absolute left-0 w-full h-full">
           {Array.from({ length: 6 }).map((_, index) => {
             const value = `$${index * 1}k`;
@@ -28,7 +42,16 @@ const BarGraph = () => {
                 <div className="w-12 text-right text-sm text-gray-600">
                   {value}
                 </div>
-                <div className="flex-grow border-t border-dotted border-gray-300"></div>
+                <div
+                  className="flex-grow"
+                  style={{
+                    borderTop: "1px dashed #D1D5DB", // Tailwind gray-300 color
+                    borderWidth: "1px",
+                    borderStyle: "dashed",
+                    borderColor: "#D1D5DB",
+                    borderDasharray: "8, 4", // Custom dash pattern: 8px dash, 4px space
+                  }}
+                ></div>
               </div>
             );
           })}
@@ -54,7 +77,31 @@ const BarGraph = () => {
                   style={{ height: `${height}%` }}
                 ></div>
                 <div className="mb-[0px] text-sm text-gray-700">
-                  <p className="mb-[-10px]">{item.label}</p>
+                  <p className="mb-[-11px]">{item.label}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      {/* transaction */}
+      <div className="flex flex-col justify-center pl-7 pb-5 pt-5 ">
+        <div className="flex justify-between items-center w-full ">
+          <h3 className="font-bold">Your Transactions(3)</h3>
+          <p>
+            Last <span className="underline">30 days</span>
+          </p>
+        </div>
+        <div className='mt-4'>
+          {money.map((dollar) => {
+            return (
+              <div
+                key={dollar.id}
+                className="flex justify-between items-center w-full py-2 "
+              >
+                <div className="flex justify-between items-center w-full bg-white p-4 rounded-lg border-none">
+                  <p className="text-3xl font-bold">{dollar.text}</p>
+                  <p className="">{dollar.date}</p>
                 </div>
               </div>
             );
