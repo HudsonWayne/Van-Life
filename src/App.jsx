@@ -1,13 +1,13 @@
-import React from 'react';
-import VansList from './components/VansList';
+import "bootstrap/dist/css/bootstrap.min.css";
+import './App.css'
+import Home from "./../src/assets/components/Home/Home"
 
 function App() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Your Listed Vans</h1>
-      <VansList />
+    <div className="app">
+      <Home/>
     </div>
-  );
+  )
 }
 
 export default App;
