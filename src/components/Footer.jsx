@@ -1,4 +1,6 @@
 
+import '../index.css'
+
 import '../App.css'
 import { FaRegCopyright } from "react-icons/fa6";
 
