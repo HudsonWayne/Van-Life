@@ -8,8 +8,6 @@ import Host from "./components/Host/Dashboard";
 import Login from "./components/Login";
 import About from "./components/About.jsx";
 
-
-
 const App = () => {
   return (
     <>
@@ -25,9 +23,6 @@ const App = () => {
     </>
   );
 };
-   
-
-
 
 export default App;
 
