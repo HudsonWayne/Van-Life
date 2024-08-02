@@ -1,7 +1,7 @@
 import banner from "./../assets/about_banner.png";
 
 
-function About() {
+const  About =() => {
   return (
     <div className=" mx-auto  sm:block md:hidden">
       <img src={banner} alt="Van Rental Image" className="w-full " />
