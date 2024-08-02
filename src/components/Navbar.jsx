@@ -1,6 +1,5 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
-import './style.css'
 import { FaRegCircleUser } from "react-icons/fa6";
 import Logo from '../assets/logog.png'
 
