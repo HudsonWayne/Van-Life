@@ -1,11 +1,11 @@
 import { useState } from "react";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const SignInForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  // const history = useHistory();
+  const history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -38,9 +38,6 @@ const SignInForm = () => {
         </h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-[20px]">
           <div className="mb-4">
-            {/* <label htmlFor="email" className="block text-sm font-bold mb-2">
-              Email address
-            </label> */}
             <input
               type="email"
               id="email"
@@ -51,9 +48,6 @@ const SignInForm = () => {
             />
           </div>
           <div className="mb-4">
-            {/* <label htmlFor="password" className="block text-sm font-bold mb-2">
-              Password
-            </label> */}
             <input
               type="password"
               id="password"
@@ -73,7 +67,7 @@ const SignInForm = () => {
             Sign In
           </button>
           <div className="mt-4 text-sm text-[20px] flex">
-            <p className="text-[20px]">Don't have an account?</p>
+            <p className="text-[20px]">Does not have an account?</p>
             <a href="#" className="text-[#FF8227] hover:underline text-[20px]">
               Create one now
             </a>
