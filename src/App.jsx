@@ -7,11 +7,11 @@ import Navbar from './components/Navbar'
 import Host from './components/Host/Dashboard'
 import Login from './components/Login'
 import About from './components/About.jsx'
+import Error from './components/Error.jsx';
 
 const App = () => {
   return (
     <>
-      <Router>
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/Login" element={<Login />} />
         </Routes>
         <Footer />
-      </Router>
+
     </>
   )
 }
