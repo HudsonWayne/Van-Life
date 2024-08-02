@@ -11,7 +11,7 @@ import About from './components/About.jsx'
 const App = () => {
   return (
     <>
-      <Router>
+      
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -20,8 +20,10 @@ const App = () => {
           <Route exact path="/Vans" element={<Vans />} />
           <Route path="/Login" element={<Login />} />
         </Routes>
+
+        <Vans/> 
         <Footer />
-      </Router>
+      
     </>
   )
 }
