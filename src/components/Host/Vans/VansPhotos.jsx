@@ -1,55 +1,58 @@
 import image from "../../../assets/Modest_Explorer rent.jpg";
+import './VansPhotos.css'
 
 const VansPhotos = () => {
   return (
-    <div>
-      <div className="container">
-        <ul>
-          <a href="">Dashboard</a>
-          <a href="">Income</a>
-          <a href="" className="vans-link">
-            Vans
-          </a>
-          <a href="">Reviews</a>
-        </ul>
-        <div className="back">
+    <div class="container">
+        <div class="link">
+            <li><Link to='./Dashboard'>Dashboard</Link></li>
+            <li><Link to='./Income'>Income</Link></li>
+            <li><Link to='./Vans'>Vans</Link></li>
+            <li><Link to='./Reviews'>Reviews</Link></li>
+          
+        </div>
+        <div class="back">
           <a href="">Back to all vans</a>
         </div>
 
-        <div className="van-card">
-          <div className=" image-text ">
-            <div className="container">
-              <div className="row">
-                <div className="first">
-                  <div className="image-container col-md-6">
-                    <img src={image} alt="Car" />
+        <div class="van-card">
+          <div class=" image-text ">
+            <div class="container">
+              <div class="row">
+                <div class="first">
+                  <div class="image-container col-md-6">
+                      {/* <img src="./image/Rectangle 162.png" alt=""> */}
+                    <img src={image} alt="Car" /> 
                   </div>
-                  <div className="text-container col-md-6">
+                  <div class="text-container col-md-6">
                     <button>Simple</button>
 
-                    <h2>Modest Explorer</h2>
+                    <h2 class="text">Modest Explorer</h2>
                     <p>
                       <span>$60</span>/day
                     </p>
                   </div>
                 </div>
 
+              </div>
+              <div class="photos-section">
+                
                 <ul>
-                  <a href="" className="dd">
+                  <a href="" class="dd">
                     Details
                   </a>
                   <a href="">Pricing</a>
-                  <a href="">Photos</a>
+                  <li><Link to="./VansPhotos" class="photo"></Link>Photos</li>
                 </ul>
-                <div className="image">
-                  <img src={image} alt="" />
+                <div class="image">
+                      {/* <img src="./image/Rectangle 162.png" alt=""> */}
+                   <img src={image} alt="car" /> 
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div> 
   );
 };
 
