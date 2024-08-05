@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Beach from "../../assets/Beach_Bum photos.jpg";
 import Green from "../../assets/Green_Wonder photos.jpg";
 import Modest from "../../assets/Modest_Explorer photos.jpg";
+import HostNavbar from './HostNavbar';
 
 const Dashboard = () => {
   const vans = [
@@ -26,14 +27,7 @@ const Dashboard = () => {
     <div className="dashboard sm:block md:hidden">
       <main className="dashboardContent">
         <div className="dashboardContainer">
-          <div className="dashboardLinks">
-            <ul>
-              <li>Dashboard</li>
-              <li>Income</li>
-              <li>Vans</li>
-              <li>Reviews</li>
-            </ul>
-          </div>
+          <HostNavbar/>
           <div className="dashboardMain">
             <div className="dashboardHeading container">
               <h1>Welcome!</h1>

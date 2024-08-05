@@ -40,20 +40,6 @@
   }
   .dashboardContent {
     .dashboardContainer {
-      .dashboardLinks {
-        background: #f7f7f7;
-
-        ul {
-          display: flex;
-          text-align: start;
-          gap: 5%;
-
-          li {
-            list-style: none;
-            opacity: 0.5;
-          }
-        }
-      }
       .dashboardMain {
         .dashboardHeading {
           background: #ffead0;
@@ -120,3 +106,20 @@
   }
 }
 /* END OF DASHBOARD STYLES */
+
+/* THE STYLES FOR HOST NAVBAR */
+.dashboardLinks {
+        background: #f7f7f7;
+
+        ul {
+          display: flex;
+          text-align: start;
+          gap: 5%;
+
+          li {
+            list-style: none;
+            opacity: 0.5;
+          }
+        }
+      }
+/* END OF HOST NAVBAR */
