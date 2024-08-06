@@ -21,7 +21,7 @@ const money = [
 
 const Income = () => {
   return (
-    <div className="p-6 sm:block md:hidden bg-[#FFF7ED] rounded-lg shadow-md w-full  mb-12 mt-12">
+    <div className="p-6 sm:block md:block lg:hidden bg-[#FFF7ED] rounded-lg shadow-md w-full  mb-12 mt-12">
       <div className="flex gap-4 flex-col justify-center w-full min-h-[200px] ">
         <h2 className=" text-2xl font-bold">Income</h2>
         <p>
