@@ -1,4 +1,4 @@
-import "./Income.css";
+import './Income.css'
 
 const data = [
   { label: "Ju", value: 3000 },
@@ -17,7 +17,7 @@ const money = [
   { text: "$980", date: "23/11/22" },
 ];
 
-const Income = () => {
+const BarGraph = () => {
   return (
     <div className="p-6 sm:block md:hidden bg-[#FFF7ED] rounded-lg shadow-md w-full  mb-12 mt-12">
       <div className="flex gap-4 flex-col justify-center w-full min-h-[200px] ">
@@ -112,4 +112,4 @@ const Income = () => {
   );
 };
 
-export default Income;
+export default BarGraph;
