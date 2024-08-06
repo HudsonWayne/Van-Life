@@ -1,0 +1,10 @@
+# pack-refs with: peeled fully-peeled sorted 
+fa8b4e5fd034a069524d03a1ac76749ec7d6ed8b refs/remotes/origin/404Dashboard
+fbbeb06fe346ce368977eadd6b73a5b9ee9982fb refs/remotes/origin/About-Intro
+292193c8895ec1a42a14d0c8ca887f1ebb3c5891 refs/remotes/origin/HomeAbout
+cf522b608f7fdb71f5768306d0a5d2fbf61cc4ae refs/remotes/origin/Host
+2608e4a4cf961c8ad9f78d60c7220980524b14c5 refs/remotes/origin/Nav-Footer-Reviews
+508288fc2316a22342de9ecfd6789eaaec6e72ad refs/remotes/origin/development
+9aaca6f6a7d3789ed3d36dc6aab9fdd51ca17799 refs/remotes/origin/host
+2608e4a4cf961c8ad9f78d60c7220980524b14c5 refs/remotes/origin/main
+0c443bc4681c34f6ca19ecb8a460b52c7b14dd70 refs/remotes/origin/vansReviews

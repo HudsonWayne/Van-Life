@@ -1,0 +1,14 @@
+0000000000000000000000000000000000000000 2608e4a4cf961c8ad9f78d60c7220980524b14c5 unknown <chakawuyat1@gmail.com> 1722939181 +0200	clone: from https://github.com/HudsonWayne/Van-Life.git
+2608e4a4cf961c8ad9f78d60c7220980524b14c5 2608e4a4cf961c8ad9f78d60c7220980524b14c5 unknown <chakawuyat1@gmail.com> 1722939454 +0200	checkout: moving from main to vanlist
+2608e4a4cf961c8ad9f78d60c7220980524b14c5 508288fc2316a22342de9ecfd6789eaaec6e72ad unknown <chakawuyat1@gmail.com> 1722939486 +0200	merge origin/development: Fast-forward
+508288fc2316a22342de9ecfd6789eaaec6e72ad 514bc0f7e9df2287ce4925f825ba29b50a477fec unknown <chakawuyat1@gmail.com> 1722944031 +0200	commit: my first commit
+514bc0f7e9df2287ce4925f825ba29b50a477fec 6ba7bc7e27fb0faaac5299e0258023f0977ae9ba unknown <chakawuyat1@gmail.com> 1722944044 +0200	checkout: moving from vanlist to Nav-Footer-Reviews
+6ba7bc7e27fb0faaac5299e0258023f0977ae9ba fa8b4e5fd034a069524d03a1ac76749ec7d6ed8b unknown <chakawuyat1@gmail.com> 1722944599 +0200	checkout: moving from Nav-Footer-Reviews to 404Dashboard
+fa8b4e5fd034a069524d03a1ac76749ec7d6ed8b fa8b4e5fd034a069524d03a1ac76749ec7d6ed8b unknown <chakawuyat1@gmail.com> 1722950110 +0200	checkout: moving from 404Dashboard to Vans
+fa8b4e5fd034a069524d03a1ac76749ec7d6ed8b a396b7fed094d8f489193e1b0052331328f2352a unknown <chakawuyat1@gmail.com> 1722950320 +0200	commit: Introduced the vans section
+a396b7fed094d8f489193e1b0052331328f2352a 88141da97d3c9f6ca3596b2c9d5234223eee902b unknown <chakawuyat1@gmail.com> 1722951107 +0200	checkout: moving from Vans to development
+88141da97d3c9f6ca3596b2c9d5234223eee902b 4a85046fa07eb81f37577209c1ace306499a36bc unknown <chakawuyat1@gmail.com> 1722951476 +0200	commit (merge): Introduced the vans section
+4a85046fa07eb81f37577209c1ace306499a36bc a38bf1fd95ccdff6174e1623bc4895c9e86c58bd unknown <chakawuyat1@gmail.com> 1722951600 +0200	checkout: moving from development to HomeAbout
+a38bf1fd95ccdff6174e1623bc4895c9e86c58bd 7e35f696399f4af3a0b6c4b195558a0176a7f7b1 unknown <chakawuyat1@gmail.com> 1722951637 +0200	pull: Fast-forward
+7e35f696399f4af3a0b6c4b195558a0176a7f7b1 a396b7fed094d8f489193e1b0052331328f2352a unknown <chakawuyat1@gmail.com> 1722951701 +0200	checkout: moving from HomeAbout to Vans
+a396b7fed094d8f489193e1b0052331328f2352a 4a85046fa07eb81f37577209c1ace306499a36bc unknown <chakawuyat1@gmail.com> 1722951756 +0200	merge development: Fast-forward

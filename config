@@ -1,0 +1,35 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/HudsonWayne/Van-Life.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+	vscode-merge-base = origin/main
+[branch "vanlist"]
+	vscode-merge-base = origin/main
+[branch "Nav-Footer-Reviews"]
+	remote = origin
+	merge = refs/heads/Nav-Footer-Reviews
+	vscode-merge-base = origin/main
+[branch "404Dashboard"]
+	remote = origin
+	merge = refs/heads/404Dashboard
+	vscode-merge-base = origin/main
+[branch "Vans"]
+	vscode-merge-base = origin/404Dashboard
+	remote = origin
+	merge = refs/heads/Vans
+[branch "development"]
+	remote = origin
+	merge = refs/heads/development
+	vscode-merge-base = origin/main
+[branch "HomeAbout"]
+	remote = origin
+	merge = refs/heads/HomeAbout
+	vscode-merge-base = origin/main
