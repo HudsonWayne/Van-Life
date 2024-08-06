@@ -74,7 +74,7 @@ const Dashboard = () => {
               </button>
             </div>
             {vans.map((van, index) => (
-              <div className="dashboardVan">
+              <div className="dashboardVan" key={Math.random()}>
                 <div className="dashboardPictureDetails">
                   <img
                     src={van.image}
