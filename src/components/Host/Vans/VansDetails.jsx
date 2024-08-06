@@ -1,5 +1,5 @@
-import VansPhotos from "./VansPhotos";
-import VansPricing from "./VansPricing";
+import image from '../../../assets/Modest_Explorer rent.jpg'
+import { Link } from "react-router-dom";
 import './Vans-Details.css'
 const VansDetails = () => {
   return (
@@ -23,11 +23,10 @@ const VansDetails = () => {
                 <div className="first">
                   <div className="image-container col-md-6">
                     <img src={image} alt="" />
-                    {/* <img src="./image/Rectangle 162.png" alt="">
-                    <!-- <img src="image/Rectangle 162.png""Car" /> --> */}
+                  
                   </div>
                   <div className="text-container col-md-6">
-                    <button class="bnt9"> Simple</button>
+                    <button className="bnt9"> Simple</button>
 
                     <h2>Modest Explorer</h2>
                     <p>

@@ -1,6 +1,8 @@
 @media (min-width: 320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
- 
+ .bb{
+    text-decoration: underline;
+ }
 
   .link {
     display: flex;
