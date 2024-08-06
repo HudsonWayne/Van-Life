@@ -3,7 +3,7 @@ import banner from "./../assets/about_banner.png";
 
 const  About =() => {
   return (
-    <div className=" mx-auto  sm:block md:hidden">
+    <div className=" mx-auto  sm:block md:hidden h-80vh">
       <img src={banner} alt="Van Rental Image" className="w-full " />
       <div className="flex flex-col md:flex-row items-center justify-between container">
         <div className="md:w-1/2"></div>
