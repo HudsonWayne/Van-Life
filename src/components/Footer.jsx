@@ -1,4 +1,4 @@
-import React from 'react'
+
 import '../index.css'
 import { FaRegCopyright } from "react-icons/fa6";
 

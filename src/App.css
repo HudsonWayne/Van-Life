@@ -1,0 +1,10 @@
+.h-screen{
+  background-image: url(./assets/Home_banner.png);
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-direction: column;
+}
