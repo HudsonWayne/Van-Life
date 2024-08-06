@@ -1,12 +1,12 @@
 import banner from "./../assets/about_banner.png";
 import { useNavigate } from "react-router-dom";
 
-
+import Vans from "./Vans";
 const  About =() => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/new-page"); // Replace '/new-page' with your desired path
+    navigate("/Vans"); // Replace '/new-page' with your desired path
     console.log("clicked")
   };
 
