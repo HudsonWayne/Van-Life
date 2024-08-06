@@ -23,8 +23,7 @@ const VansDetails = () => {
                 <div className="first">
                   <div className="image-container col-md-6">
                     <img src={image} alt="" />
-                    {/* <img src="./image/Rectangle 162.png" alt="">
-                    <!-- <img src="image/Rectangle 162.png""Car" /> --> */}
+                  
                   </div>
                   <div className="text-container col-md-6">
                     <button class="bnt9"> Simple</button>

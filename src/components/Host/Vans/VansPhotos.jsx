@@ -3,31 +3,31 @@ import './VansPhotos.css'
 
 const VansPhotos = () => {
   return (
-    <div class="container">
-        <div class="link">
+    <div className="container">
+        <div className="link">
             <li><Link to='./Dashboard'>Dashboard</Link></li>
             <li><Link to='./Income'>Income</Link></li>
             <li><Link to='./Vans'>Vans</Link></li>
             <li><Link to='./Reviews'>Reviews</Link></li>
           
         </div>
-        <div class="back">
+        <div className="back">
           <a href="">Back to all vans</a>
         </div>
 
-        <div class="van-card">
-          <div class=" image-text ">
-            <div class="container">
-              <div class="row">
-                <div class="first">
-                  <div class="image-container col-md-6">
+        <div className="van-card">
+          <div className=" image-text ">
+            <div className="container">
+              <div className="row">
+                <div className="first">
+                  <div className="image-container col-md-6">
                       {/* <img src="./image/Rectangle 162.png" alt=""> */}
                     <img src={image} alt="Car" /> 
                   </div>
-                  <div class="text-container col-md-6">
+                  <div className="text-container col-md-6">
                     <button>Simple</button>
 
-                    <h2 class="text">Modest Explorer</h2>
+                    <h2 className="text">Modest Explorer</h2>
                     <p>
                       <span>$60</span>/day
                     </p>
@@ -35,16 +35,16 @@ const VansPhotos = () => {
                 </div>
 
               </div>
-              <div class="photos-section">
+              <div className="photos-section">
                 
                 <ul>
-                  <a href="" class="dd">
+                  <a href="" className="dd">
                     Details
                   </a>
                   <a href="">Pricing</a>
-                  <li><Link to="./VansPhotos" class="photo"></Link>Photos</li>
+                  <li><Link to="./VansPhotos" className="photo"></Link>Photos</li>
                 </ul>
-                <div class="image">
+                <div className="image">
                       {/* <img src="./image/Rectangle 162.png" alt=""> */}
                    <img src={image} alt="car" /> 
                 </div>
