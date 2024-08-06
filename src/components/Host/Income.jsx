@@ -1,5 +1,3 @@
-
-
 import "./Income.css";
 
 const data = [
@@ -47,11 +45,11 @@ const BarGraph = () => {
                 <div
                   className="flex-grow"
                   style={{
-                    borderTop: "1px dashed #D1D5DB", // Tailwind gray-300 color
+                    borderTop: "1px dashed #D1D5DB", 
                     borderWidth: "1px",
                     borderStyle: "dashed",
                     borderColor: "#D1D5DB",
-                    borderDasharray: "8, 4", // Custom dash pattern: 8px dash, 4px space
+                    borderDasharray: "8, 4", 
                   }}
                 ></div>
               </div>
@@ -64,9 +62,7 @@ const BarGraph = () => {
           {data.map((item, index) => {
             const height = (item.value / maxValue) * 100;
             const barColor =
-              index === data.length - 2
-                ? "bg-[#FF8227]"
-                : index === data.length - 1
+              index === data.length - 2 || index === data.length - 1
                 ? "bg-[#FF8227]"
                 : "bg-[#FFEACB]";
             return (
@@ -95,19 +91,17 @@ const BarGraph = () => {
           </p>
         </div>
         <div className="mt-4">
-          {money.map((dollar) => {
-            return (
-              <div
-                key={dollar.id}
-                className="flex justify-between items-center w-full py-2"
-              >
-                <div className="flex justify-between items-center w-full bg-white p-4 rounded-lg border-none ">
-                  <p className="text-3xl font-bold">{dollar.text}</p>
-                  <p className="">{dollar.date}</p>
-                </div>
+          {money.map((dollar, index) => (
+            <div
+              key={index}
+              className="flex justify-between items-center w-full py-2"
+            >
+              <div className="flex justify-between items-center w-full bg-white p-4 rounded-lg border-none ">
+                <p className="text-3xl font-bold">{dollar.text}</p>
+                <p className="">{dollar.date}</p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -115,4 +109,3 @@ const BarGraph = () => {
 };
 
 export default BarGraph;
-
