@@ -67,7 +67,7 @@ const Dashboard = () => {
               <button
                 className="errorBtn"
                 onClick={() => {
-                  window.location.href = "/";
+                  window.location.href = "/Host/Vans";
                 }}
               >
                 View all
