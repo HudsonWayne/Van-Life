@@ -55,6 +55,7 @@ table {
    
 .Navbar{
     height: 10vh;
+    overflow-x: hidden;
     background-color: #FFF7ED;
     color: black;
     width: 100vw;
