@@ -1,5 +1,6 @@
 import VansPhotos from "./VansPhotos";
 import VansPricing from "./VansPricing";
+import { Link } from "react-router-dom";
 import './Vans-Details.css'
 const VansDetails = () => {
   return (
