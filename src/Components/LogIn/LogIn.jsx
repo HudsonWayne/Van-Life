@@ -1,11 +1,11 @@
 import { useState } from "react";
-// import {useHistory} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const SignInForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  // const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -27,7 +27,12 @@ const Login = () => {
       return;
     }
 
-    history.push("/welcome");
+    navigate("/welcome");
+  };
+
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    navigate("/signup");
   };
 
   return (
@@ -67,8 +72,12 @@ const Login = () => {
             Sign In
           </button>
           <div className="mt-4 text-sm text-[20px] flex">
-            <p className="text-[20px]">Does not have an account?</p>
-            <a href="#" className="text-[#FF8227] hover:underline text-[20px]">
+            <p className="text-[20px]">Dont have an account?</p>
+            <a
+              href="/SignUp"
+              onClick={handleSignUp}
+              className="text-[#FF8227] hover:underline text-[20px]"
+            >
               Create one now
             </a>
           </div>
@@ -78,4 +87,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignInForm;
