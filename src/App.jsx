@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home";
 import Footer from "./components/Footer.jsx";
@@ -10,8 +10,9 @@ import About from "./components/About.jsx";
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
+
+<>
+<Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Host" element={<Host />} />
@@ -19,8 +20,8 @@ const App = () => {
         <Route path="/Vans" element={<Vans />} />
         <Route path="/Login" element={<Login />} />
       </Routes>
-      <Footer />
-    </Router>
+      <Footer /></>
+  
   );
 };
 
