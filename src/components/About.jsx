@@ -5,7 +5,7 @@ const About = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/new-page"); // Replace '/new-page' with your desired path
+    navigate("/Vans"); // Replace '/new-page' with your desired path
     console.log("clicked");
   };
 
