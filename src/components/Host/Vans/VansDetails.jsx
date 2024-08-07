@@ -1,41 +1,33 @@
 import image from "../../../assets/Modest_Explorer rent.jpg";
 import { Link } from "react-router-dom";
 import "./Vans-Details.css";
+import "./vans"
+import HomeVan from "./VansHome"
+import HostNavbar from "../HostNavbar";
 
 const VansDetails = () => {
+   {
+     vans.map((van) => <vans key={van.id} van={van} />);
+   }
   return (
     <div className="container">
-      <ul className="link">
-        <li>
-          <Link to="./Dashboard">Dashboard</Link>
-        </li>
-        <li>
-          <Link to="./Income">Income</Link>
-        </li>
-        <li>
-          <Link to="./Vans">Vans</Link>
-        </li>
-        <li>
-          <Link to="./Reviews">Reviews</Link>
-        </li>
-      </ul>
+      <HostNavbar />
       <div className="back">
-        <Link to="./Vans">Back to all Vans</Link>
+        <Link to="/Vans">Back to all vans</Link>
       </div>
-
       <div className="van-card">
         <div className="image-text">
           <div className="container">
             <div className="row">
               <div className="first">
                 <div className="image-container col-md-6">
-                  <img src={image} alt="Modest Explorer" />
+                  <img key={van.id} src={van.image} alt="Modest Explorer" />
                 </div>
                 <div className="text-container col-md-6">
-                  <button className="bnt9">Simple</button>
-                  <h2>Modest Explorer</h2>
+                  <button className="bnt9">{van.category}</button>
+                  <h2>{van.name}</h2>
                   <p>
-                    <span>$60</span>/day
+                    <span>{van.price}</span>/day
                   </p>
                 </div>
               </div>
@@ -54,24 +46,6 @@ const VansDetails = () => {
                 <Link to="./VansPricing">Pricing</Link>
               </li>
             </ul>
-            <div className="description-text">
-              <p>
-                <span>Name</span>: Modest Explorer
-              </p>
-              <p>
-                <span>Category</span>: Simple
-              </p>
-              <p>
-                <span>Description</span>: The Modest Explorer is a van designed
-                to get you out of the house and into nature. This beauty is
-                equipped with solar panels, a composting toilet, a water tank,
-                and kitchenette. The idea is that you can pack up your home and
-                escape for a weekend or even longer.
-              </p>
-              <p>
-                <span>Visibility</span>: Public
-              </p>
-            </div>
           </div>
         </div>
       </div>

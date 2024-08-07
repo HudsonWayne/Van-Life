@@ -1,28 +1,21 @@
 import image from "../../../assets/Modest_Explorer rent.jpg";
+import HostNavbar from "../HostNavbar";
 import "./VansPricing.css";
+import VansHome from "./VansHome";
+import Navbar from  "../HostNavbar"
 import { Link } from "react-router-dom";
 
 const VansPricing = () => {
+  {
+    vans.map((van) => <vans key={van.id} van={van} />);
+  }
   return (
     <div className="container">
       <div className="link">
-        <ul>
-          <li>
-            <Link to="./Dashboard">Dashboard</Link>
-          </li>
-          <li>
-            <Link to="./Income">Income</Link>
-          </li>
-          <li>
-            <Link to="./Vans">Vans</Link>
-          </li>
-          <li>
-            <Link to="./Reviews">Reviews</Link>
-          </li>
-        </ul>
+        <HostNavbar />
       </div>
       <div className="back">
-        <Link to="">Back to all vans</Link>
+        <Link to="/Vans">Back to all vans</Link>
       </div>
 
       <div className="van-card">
@@ -31,13 +24,13 @@ const VansPricing = () => {
             <div className="row">
               <div className="first">
                 <div className="image-container col-md-6">
-                  <img src={image} alt="Modest Explorer" />
+                  <img key={van.id} src={van.image} alt="Modest Explorer" />
                 </div>
                 <div className="text-container col-md-6">
-                  <button>Simple</button>
-                  <h2 className="text">Modest Explorer</h2>
+                  <button className="bnt9">{van.category}</button>
+                  <h2>{van.name}</h2>
                   <p>
-                    <span>$60</span>/day
+                    <span>{van.price}</span>/day
                   </p>
                 </div>
               </div>
@@ -45,22 +38,25 @@ const VansPricing = () => {
             <div className="photos-section">
               <ul>
                 <li>
-                  <Link to="" className="dd">
+                  <Link to="/VansDetails" className="dd">
                     Details
                   </Link>
                 </li>
                 <li>
-                  <Link to="" className="price">
+                  <Link to="/VansPricing" className="price">
                     Pricing
                   </Link>
                 </li>
                 <li>
-                  <Link to="">Photos</Link>
+                  <Link to="/VansPhotos">Photos</Link>
                 </li>
               </ul>
               <div className="prices-tag">
                 <h2>
-                  <span>$60</span>/day
+                  <span>
+                    key={van.id} ${van.price}
+                  </span>
+                  /day
                 </h2>
               </div>
             </div>
