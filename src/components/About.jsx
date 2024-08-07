@@ -12,11 +12,6 @@ const  About =() => {
 
 
   return (
-
-
-   
-
-
     <div className=" mx-auto  sm:block md:hidden h-80vh">
  development
       <img src={banner} alt="Van Rental Image" className="w-full " />
