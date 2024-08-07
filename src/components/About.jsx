@@ -1,24 +1,16 @@
 import banner from "./../assets/about_banner.png";
 import { useNavigate } from "react-router-dom";
 
-
-const  About =() => {
+const About = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate("/new-page"); // Replace '/new-page' with your desired path
-    console.log("clicked")
+    console.log("clicked");
   };
 
-
   return (
-
-
-   
-
-
     <div className=" mx-auto  sm:block md:hidden h-80vh">
- development
       <img src={banner} alt="Van Rental Image" className="w-full " />
       <div className="flex flex-col md:flex-row items-center justify-between container">
         <div className="md:w-1/2"></div>
@@ -50,8 +42,6 @@ const  About =() => {
       </div>
     </div>
   );
-}
-
+};
 
 export default About;
-
