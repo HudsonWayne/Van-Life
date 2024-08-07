@@ -1,15 +1,13 @@
 import banner from "./../assets/about_banner.png";
 import { useNavigate } from "react-router-dom";
 
-
-const  About =() => {
+const About = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate("/new-page"); // Replace '/new-page' with your desired path
-    console.log("clicked")
+    console.log("clicked");
   };
-
 
   return (
     <div className=" mx-auto  sm:block md:hidden h-80vh">
@@ -44,6 +42,6 @@ const  About =() => {
       </div>
     </div>
   );
-}
+};
 
 export default About;
