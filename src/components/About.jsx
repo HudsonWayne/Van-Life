@@ -8,8 +8,7 @@ const  About =() => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/Vans"); // Replace '/new-page' with your desired path
-    console.log("clicked");
+    navigate("/Vans");
   };
   return (
     <div className=" mx-auto  sm:block md:hidden">
@@ -34,8 +33,8 @@ const  About =() => {
             <h2 className="text-2xl">Your destination is waiting.</h2>
             <h2 className="text-2xl">Your van is ready</h2>
             <button
-              className="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               onClick={handleClick}
+              className="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
               Explore Our Vans
             </button>
