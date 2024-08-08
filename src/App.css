@@ -58,7 +58,7 @@ table {
     overflow-x: hidden;
     background-color: #FFF7ED;
     color: black;
-    width: 100vw;
+    /* width: 100vw; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,6 +67,7 @@ table {
 .Navbar nav ul{
     text-decoration: none;
     display: flex;
+    align-items: center;
     gap: 10px;
 
 }
@@ -77,6 +78,7 @@ table {
 .logo{
     height: 12px;
     width: 53px;
+    margin-top: 7px;
 }
 .container{
     display: flex;
@@ -85,7 +87,7 @@ table {
 }
 .footer{
     height: 10vh;
-    width: 100vw;
+    /* width: 100vw; */
     display: flex;
     align-items: center;
     justify-content: center;
