@@ -1,5 +1,3 @@
-
-
 import "./Income.css";
 
 const data = [
@@ -14,16 +12,16 @@ const data = [
 const maxValue = 5000;
 
 const money = [
-  { text: "$720", date: "1/12/22 " },
+  { text: "$720", date: "1/12/22" },
   { text: "$560", date: "10/11/22" },
   { text: "$980", date: "23/11/22" },
 ];
 
 const Income = () => {
   return (
-    <div className="p-6 sm:block md:hidden bg-[#FFF7ED] rounded-lg shadow-md w-full  mb-12 mt-12">
-      <div className="flex gap-4 flex-col justify-center w-full min-h-[200px] ">
-        <h2 className=" text-2xl font-bold">Income</h2>
+    <div className="p-6 sm:block md:block lg:hidden bg-[#FFF7ED] rounded-lg shadow-md w-full mb-12 mt-12">
+      <div className="flex gap-4 flex-col justify-center w-full min-h-[200px]">
+        <h2 className="text-2xl font-bold">Income</h2>
         <p>
           Last <span className="underline">30 days</span>
         </p>
@@ -47,11 +45,11 @@ const Income = () => {
                 <div
                   className="flex-grow"
                   style={{
-                    borderTop: "1px dashed #D1D5DB", // Tailwind gray-300 color
+                    borderTop: "1px dashed #D1D5DB",
                     borderWidth: "1px",
                     borderStyle: "dashed",
                     borderColor: "#D1D5DB",
-                    borderDasharray: "8, 4", // Custom dash pattern: 8px dash, 4px space
+                    borderDasharray: "8, 4",
                   }}
                 ></div>
               </div>
@@ -64,9 +62,7 @@ const Income = () => {
           {data.map((item, index) => {
             const height = (item.value / maxValue) * 100;
             const barColor =
-              index === data.length - 2
-                ? "bg-[#FF8227]"
-                : index === data.length - 1
+              index === data.length - 2 || index === data.length - 1
                 ? "bg-[#FF8227]"
                 : "bg-[#FFEACB]";
             return (
@@ -86,28 +82,27 @@ const Income = () => {
           })}
         </div>
       </div>
-      {/* transaction */}
-      <div className="flex flex-col justify-center pl-7 pb-5 ml-[-25px] pt-5 ">
-        <div className="flex justify-between items-center w-full ">
-          <h3 className="font-bold">Your Transactions(3)</h3>
+
+      {/* Transaction */}
+      <div className="flex flex-col justify-center pl-7 pb-5 ml-[-25px] pt-5">
+        <div className="flex justify-between items-center w-full">
+          <h3 className="font-bold">Your Transactions (3)</h3>
           <p>
             Last <span className="underline">30 days</span>
           </p>
         </div>
         <div className="mt-4">
-          {money.map((dollar) => {
-            return (
-              <div
-                key={dollar.id}
-                className="flex justify-between items-center w-full py-2"
-              >
-                <div className="flex justify-between items-center w-full bg-white p-4 rounded-lg border-none ">
-                  <p className="text-3xl font-bold">{dollar.text}</p>
-                  <p className="">{dollar.date}</p>
-                </div>
+          {money.map((dollar, index) => (
+            <div
+              key={index}
+              className="flex justify-between items-center w-full py-2"
+            >
+              <div className="flex justify-between items-center w-full bg-white p-4 rounded-lg border-none">
+                <p className="text-3xl font-bold">{dollar.text}</p>
+                <p>{dollar.date}</p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -115,4 +110,3 @@ const Income = () => {
 };
 
 export default Income;
-

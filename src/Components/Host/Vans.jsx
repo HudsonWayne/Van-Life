@@ -1,7 +1,7 @@
-import HostNavbar from '../HostNavbar';
-import wonderphoto from '../../../assets/Green_Wonder.jpg'
-import beachbum from '../../../assets/Beach_Bum.jpg'
-import modest from '../../../assets/Modest_Explorer photos.jpg'
+import HostNavbar from './HostNavbar';
+import wonderphoto from '../../assets/Green_Wonder.jpg'
+import beachbum from '../../assets/Beach_Bum.jpg'
+import modest from '../../assets/Modest_Explorer photos.jpg'
 
 
 
