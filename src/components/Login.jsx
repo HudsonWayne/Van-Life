@@ -29,7 +29,7 @@ const LogIn = () => {
       return;
     }
 
-    history.push("/home");
+    history.push(window.location.href = "/Vans");
   };
 
   return (
