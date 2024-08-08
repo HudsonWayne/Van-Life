@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
@@ -29,7 +27,7 @@ const LogIn = () => {
       return;
     }
 
-    history.push(window.location.href = "/Vans");
+    history.push((window.location.href = "/Vans"));
   };
 
   return (
@@ -81,4 +79,3 @@ const LogIn = () => {
 };
 
 export default LogIn;
-
