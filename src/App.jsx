@@ -20,9 +20,10 @@ const App = () => {
         <Route path="/Vans" element={<Vans />} />
         <Route path="/Login" element={<Login />} />
       </Routes>
-      <Footer /></>
-  
-  );
-};
+      <Footer />
+      </>
+   );
+}; 
 
 export default App;
+ 
