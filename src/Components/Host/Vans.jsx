@@ -1,56 +1,173 @@
-import HostNavbar from './HostNavbar';
-import wonderphoto from '../../assets/Green_Wonder.jpg'
-import beachbum from '../../assets/Beach_Bum.jpg'
-import modest from '../../assets/Modest_Explorer photos.jpg'
+import React, { useState } from "react";
 
+const vans = [
+  {
+    id: 1,
+    name: "Modest Explorer",
+    price: 60,
+    type: "Simple",
+    description:
+      "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
+    image: "/src/assets/img/image 2.png",
+  },
+  {
+    id: 2,
+    name: "Beach Bum",
+    price: 80,
+    type: "Rugged",
+    description:
+      "The Beach Bum is perfect for seaside adventures, featuring a surfboard rack and ample storage for beach gear.",
+    image: "/src/assets/img/image 3.png",
+  },
+  {
+    id: 3,
+    name: "Reliable Red",
+    price: 100,
+    type: "Luxury",
+    description:
+      "Reliable Red offers the utmost comfort and reliability with luxurious interiors and modern amenities.",
+    image: "/src/assets/img/image 4.png",
+  },
+  {
+    id: 4,
+    name: "Dreamfinder",
+    price: 65,
+    type: "Simple",
+    description:
+      "The Dreamfinder is ideal for those looking for a simple, no-frills camping experience with basic amenities.",
+    image: "/src/assets/img/image 5.png",
+  },
+  {
+    id: 5,
+    name: "The Cruiser",
+    price: 120,
+    type: "Luxury",
+    description:
+      "The Cruiser is a top-of-the-line van with high-end features and comfort for the ultimate road trip.",
+    image: "/src/assets/img/Rectangle 154.png",
+  },
+  {
+    id: 6,
+    name: "Green Wonder",
+    price: 70,
+    type: "Rugged",
+    description:
+      "Green Wonder is built for rugged adventures, with off-road capabilities and robust design.",
+    image: "/src/assets/img/image 6.png",
+  },
+];
 
-
-
-import { Link } from 'react-router-dom';
-
-const CarRental = ({ carData }) => {
-     carData = [
-    {
-      id: 1,
-      name: 'Modest Explorer',
-      price: 60,
-      image: modest,
-    },
-    {
-      id: 2,
-      name: 'Beach Bum',
-      price: 80,
-      image: beachbum,
-    },
-    {
-      id: 3,
-      name: 'Green Wonder',
-      price: 70,
-      image: wonderphoto,
-    },
-  ];
+const VanCard = ({ van, onSelect }) => {
   return (
-    <div className="container mx-auto px-4 py-8 w-[25rem] bg-orange-100 sm:block md:hidden">
-      <HostNavbar/>
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-3xl font-bold mb-4">Your listed vans</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {carData.map((car) => (
-            <Link key={car.id} to={`/car-rental/${car.id}`} className="p-4 shadow-md rounded-md hover:shadow-lg bg-white ">
-              <div key={car.id}  className="flex flex-row items-center w-[25rem] h-[8rem] ">
-                <img src={car.image} alt={car.name} className=" object-cover h-[80%] mb-2" />
-                <div className='flex flex-col justify-center'>
-                 <h2 className="text-xl font-semibold mb-2">{car.name}</h2>
-                <p className="text-gray-700 mb-1">${car.price}/day</p>
-                </div>
-
-              </div>
-            </Link>
-          ))}
+    <div className="bg-white shadow-md rounded-md overflow-hidden">
+      <button onClick={() => onSelect(van)} className="w-full text-left">
+        <img
+          src={van.image}
+          alt={van.name}
+          className="w-full h-48 object-cover"
+        />
+        <div className="p-4">
+          <div className="flex justify-between items-center">
+            <h3 className="text-lg font-semibold">{van.name}</h3>
+            <span className={`tag ${van.type}`}>{van.type}</span>
+          </div>
+          <p className="text-gray-500">${van.price}/day</p>
         </div>
-      </div>
+      </button>
     </div>
   );
 };
 
-export default CarRental;
+const VanListDetail = () => {
+  const [filter, setFilter] = useState(null);
+  const [selectedVan, setSelectedVan] = useState(null);
+
+  const handleFilterClick = (type) => {
+    setFilter(type);
+  };
+
+  const clearFilters = () => {
+    setFilter(null);
+  };
+
+  const filteredVans = filter
+    ? vans.filter((van) => van.type === filter)
+    : vans;
+
+  return (
+    <section className="p-8 bg-gray-100 min-h-screen">
+      {selectedVan ? (
+        <div className="max-w-2xl mx-auto">
+          <nav className="mb-4">
+            <button
+              onClick={() => setSelectedVan(null)}
+              className="text-gray-600 hover:underline"
+            >
+              ← Back to all vans
+            </button>
+          </nav>
+          <img
+            src={selectedVan.image}
+            alt={selectedVan.name}
+            className="w-full h-64 object-cover rounded-md mb-4"
+          />
+          <div className="bg-white p-6 rounded-md shadow-md">
+            <span
+              className={`tag bg-orange-500 text-white px-3 py-1 rounded-md mb-2 inline-block`}
+            >
+              {selectedVan.type}
+            </span>
+            <h1 className="text-3xl font-bold mb-2">{selectedVan.name}</h1>
+            <p className="text-xl text-gray-700 mb-4">
+              ${selectedVan.price}/day
+            </p>
+            <p className="text-gray-600 mb-4">{selectedVan.description}</p>
+            <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md">
+              Rent this van
+            </button>
+          </div>
+          <footer className="text-center mt-8 text-gray-600">
+            <p>© 2022 #VANLIFE</p>
+          </footer>
+        </div>
+      ) : (
+        <div>
+          <h2 className="text-2xl font-bold mb-4">Explore our van options</h2>
+          <div className="flex space-x-4 mb-4">
+            <button
+              className="filter bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md"
+              onClick={() => handleFilterClick("Simple")}
+            >
+              Simple
+            </button>
+            <button
+              className="filter bg-black hover:bg-gray-900 text-white px-4 py-2 rounded-md"
+              onClick={() => handleFilterClick("Luxury")}
+            >
+              Luxury
+            </button>
+            <button
+              className="filter bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md"
+              onClick={() => handleFilterClick("Rugged")}
+            >
+              Rugged
+            </button>
+            <button
+              className="clear-filters text-gray-600 underline"
+              onClick={clearFilters}
+            >
+              Clear filters
+            </button>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {filteredVans.map((van) => (
+              <VanCard key={van.id} van={van} onSelect={setSelectedVan} />
+            ))}
+          </div>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default VanListDetail;
