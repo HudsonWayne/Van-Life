@@ -20,7 +20,6 @@
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.26.0",
     "tailwind": "^4.0.0"
-
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

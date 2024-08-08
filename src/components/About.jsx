@@ -1,9 +1,13 @@
 import banner from "./../assets/about_banner.png";
 import { useNavigate } from "react-router-dom";
-const About = () => {
+
+  
+
+
+const  About =() => {
   const navigate = useNavigate();
 
-  const handleVan = () => {
+  const handleClick = () => {
     navigate("/Vans"); // Replace '/new-page' with your desired path
     console.log("clicked");
   };
@@ -31,7 +35,7 @@ const About = () => {
             <h2 className="text-2xl">Your van is ready</h2>
             <button
               className="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              onClick={handleVan}
+              onClick={handleClick}
             >
               Explore Our Vans
             </button>
