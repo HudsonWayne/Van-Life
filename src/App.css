@@ -97,6 +97,204 @@ table {
 .footer h2{
 font-size: 12px;
 }
+
+/* VanList CSS */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.van-list {
+  padding: 20px;
+}
+
+.van-list h2 {
+  padding-left: 1.6rem;
+}
+
+.filters {
+  display: flex;
+  margin: 20px 0.8rem;
+}
+
+.filter{
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #f6c72088;
+  border: none;
+  cursor: pointer;
+}
+.clear-filters{
+  background-color: white;
+  border: none;
+}
+
+ .clear-filters:hover {
+  text-decoration: underline;  
+}
+.filter-Simple:hover{
+  background-color:#ff5722 ;
+  color: white;
+}
+.filter-Luxury:hover{
+  background-color:black ;
+  color: white;
+}
+.filter-Rugged:hover{
+  background-color:#4caf50 ;
+  color: white;
+}
+
+.vans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 0.3rem;
+}
+
+.van-card {
+  margin: 10px;
+  padding: 10px;
+  width: 176px;
+}
+
+.van-card img {
+  width: 100%;
+  height: auto;
+}
+
+.van-card .text{
+  display: flex;
+  justify-content: space-between;
+}
+.van-card h3, .van-card p {
+  margin: 10px 0;
+
+}
+.van-card h3{
+  font-size: 0.8rem;
+}
+.van-card p{
+  font-size: 0.9rem;
+}
+
+.van-card.tag {
+  /* display: inline-block; */
+  /* padding: 5px 10px; */
+  color: #fff;
+  border-radius: 5px;
+  /* margin-left: -.5rem; */
+  
+}
+
+.tag.Simple {
+  background-color: #ff5722;
+}
+
+.tag.Luxury {
+  background-color: black;
+}
+
+.tag.Rugged {
+  background-color: #4caf50;
+}
+
+
+/* Van details css */
+.van-detail {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #f8f4f0;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.van-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.van-info {
+  text-align: left;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #ff8c42;
+  color: white;
+  font-weight: bold;
+  margin-left: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.tag.simple {
+  background-color: #ff8c42;
+}
+
+.tag.rugged {
+  background-color: #6b705c;
+}
+
+.tag.luxury {
+  background-color: #457b9d;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.rent-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff8c42;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+
+
 /*
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 Bootstrap 4 breakpoints
