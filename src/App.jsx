@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import './App.css'
 
-function App() {
-
-  return (
-    <>
-      
-    </>
-  )
-}
-=======
 import {  Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home";
@@ -19,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Host from "./components/Host/Dashboard";
 import Login from "./components/Login";
 import About from "./components/About.jsx";
+import "./App.css"
 
 
 const App = () => {
@@ -37,6 +27,5 @@ const App = () => {
   
   );
 };
->>>>>>> b81fcad328f1cd16bed564331042aa6965b0c3ac
 
 export default App
