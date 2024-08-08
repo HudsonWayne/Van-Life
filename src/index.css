@@ -1,9 +1,5 @@
 @tailwind base;
 @tailwind components;
-
-@tailwind utilities;
-@tailwind utilities;
-
 @tailwind utilities;
 
 /* THE STYLES FOR THE 404 ERROR */
@@ -128,3 +124,7 @@
       }
 /* END OF HOST NAVBAR */
 
+/* VANLIST STYLES START */
+
+
+/* VANLIST STYLE END */

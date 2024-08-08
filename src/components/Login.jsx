@@ -22,12 +22,12 @@ const Login = () => {
       setErrorMessage("Password must at least be 8 characters");
       return;
     }
-    if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) {
+    if (!/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password)) {
       setErrorMessage("Password must contain special character");
       return;
     }
 
-    history.push("/welcome");
+    history.push(window.location.href = "/Vans");
   };
 
   return (
