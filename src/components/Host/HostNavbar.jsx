@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 
 const HostNavbar = () => {
@@ -12,7 +12,7 @@ const HostNavbar = () => {
           <Link to="/Host/Income">Income</Link>
         </li>
         <li>
-          <Link to="/Host/VansHome">Vans</Link>
+          <Link to="/Host/Vans">Vans</Link>
         </li>
         <li>
           <Link to="/Host/Reviews">Reviews</Link>

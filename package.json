@@ -11,11 +11,15 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "react": "^18.3.1",
+    "D": "^1.0.0",
+    "init": "^0.1.2",
+    "npx": "^10.2.2",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
-    "react-router-dom": "^6.25.1"
+    "react-router-dom": "^6.26.0",
+    "tailwind": "^4.0.0"
+
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
@@ -29,7 +33,6 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "init": "^0.1.2",
     "npx": "^10.2.2",
-    "postcss": "^8.4.41",
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.7",
     "vite": "^5.3.4"
