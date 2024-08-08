@@ -1,56 +1,113 @@
-import HostNavbar from './HostNavbar';
-import wonderphoto from '../../assets/Green_Wonder.jpg'
-import beachbum from '../../assets/Beach_Bum.jpg'
-import modest from '../../assets/Modest_Explorer photos.jpg'
+import React, { useState } from "react";
 
+const vans = [
+  {
+    id: 1,
+    name: "Modest Explorer",
+    price: 60,
+    type: "Simple",
+    image: "/src/assets/Modest_explorer.jpg",
+  },
+  {
+    id: 2,
+    name: "Beach Bum",
+    price: 80,
+    type: "Rugged",
+    image: "/src/assets/Beach_bum.jpg",
+  },
+  {
+    id: 3,
+    name: "Reliable Red",
+    price: 100,
+    type: "Luxury",
+    image: "/src/assets/Reliable_Red.jpg",
+  },
+  {
+    id: 4,
+    name: "Dreamfinder",
+    price: 65,
+    type: "Simple",
+    image: "/src/assets/Dreamfinder.jpg",
+  },
+  {
+    id: 5,
+    name: "The Cruiser",
+    price: 120,
+    type: "Luxury",
+    image: "/src/assets/The_Cruiser.jpg",
+  },
+  {
+    id: 6,
+    name: "Green Wonder",
+    price: 70,
+    type: "Rugged",
+    image: "/src/assets/Green_Wonder.jpg",
+  },
+];
 
-
-
-import { Link } from 'react-router-dom';
-
-const CarRental = ({ carData }) => {
-     carData = [
-    {
-      id: 1,
-      name: 'Modest Explorer',
-      price: 60,
-      image: modest,
-    },
-    {
-      id: 2,
-      name: 'Beach Bum',
-      price: 80,
-      image: beachbum,
-    },
-    {
-      id: 3,
-      name: 'Green Wonder',
-      price: 70,
-      image: wonderphoto,
-    },
-  ];
+const VanCard = ({ van }) => {
   return (
-    <div className="container mx-auto px-4 py-8 w-[25rem] bg-orange-100 sm:block md:hidden">
-      <HostNavbar/>
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-3xl font-bold mb-4">Your listed vans</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {carData.map((car) => (
-            <Link key={car.id} to={`/car-rental/${car.id}`} className="p-4 shadow-md rounded-md hover:shadow-lg bg-white ">
-              <div key={car.id}  className="flex flex-row items-center w-[25rem] h-[8rem] ">
-                <img src={car.image} alt={car.name} className=" object-cover h-[80%] mb-2" />
-                <div className='flex flex-col justify-center'>
-                 <h2 className="text-xl font-semibold mb-2">{car.name}</h2>
-                <p className="text-gray-700 mb-1">${car.price}/day</p>
-                </div>
-
-              </div>
-            </Link>
-          ))}
-        </div>
+    <div className="van-card">
+      <a href={`/vans/${van.id}`}>
+        <img src={van.image} alt={van.name} />
+      </a>
+      <div className="text">
+        <h3>{van.name}</h3>
+        <p>${van.price}/day</p>
       </div>
+      <span className={`tag ${van.type}`}>{van.type}</span>
     </div>
   );
 };
 
-export default CarRental;
+const VanList = () => {
+  const [filter, setFilter] = useState(null);
+
+  const handleFilterClick = (type) => {
+    setFilter(type);
+  };
+
+  const clearFilters = () => {
+    setFilter(null);
+  };
+
+  const filteredVans = filter
+    ? vans.filter((van) => van.type === filter)
+    : vans;
+
+  return (
+    <section className="van-list">
+      <h2>Explore our van options</h2>
+      <div className="filters">
+        <button
+          className="filter filter-Simple"
+          onClick={() => handleFilterClick("Simple")}
+        >
+          Simple
+        </button>
+        <button
+          className="filter filter-Luxury"
+          onClick={() => handleFilterClick("Luxury")}
+        >
+          Luxury
+        </button>
+        <button
+          className="filter filter-Rugged"
+          onClick={() => handleFilterClick("Rugged")}
+        >
+          Rugged
+        </button>
+        <button className="clear-filters" onClick={clearFilters}>
+          Clear filters
+        </button>
+      </div>
+      <div className="vans">
+        {filteredVans.map((van) => (
+          <VanCard key={van.id} van={van} />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default VanList;

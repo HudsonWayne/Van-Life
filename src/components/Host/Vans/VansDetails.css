@@ -58,6 +58,7 @@
                 border: none;
                 color: #ffead0;
                 width: fit-content;
+                width: -moz-fit-content;
                 padding: 10px 10px;
                 border-radius: 5px;
               }
