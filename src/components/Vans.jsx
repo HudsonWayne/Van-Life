@@ -78,20 +78,7 @@ const Vans = () => {
     );
   };
 
-  const VanDetail = ({ van }) => {
-    return (
-      <section className="van-detail">
-        <img src={van.image} alt={van.name} />
-        <div>
-          <span className={`tag ${van.type}`}>{van.type}</span>
-          <h2>{van.name}</h2>
-          <p>${van.price}/day</p>
-          <p>{van.description}</p>
-          <button className="rent-button">Rent this van</button>
-        </div>
-      </section>
-    );
-  };
+  
 
   const VanList = () => {
     return (
