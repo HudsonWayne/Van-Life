@@ -1,4 +1,4 @@
-import React from 'react'
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Beach from "../../assets/Beach_Bum photos.jpg";
 import Green from "../../assets/Green_Wonder photos.jpg";

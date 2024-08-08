@@ -74,6 +74,9 @@ table {
     list-style: none;
     color:#252525;
 }
+.Navbar nav li:hover{
+    text-decoration: underline;
+}
 .logo{
     height: 12px;
     width: 53px;
