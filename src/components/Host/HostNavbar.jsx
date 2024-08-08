@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HostNavbar = () => {
   return (
-    <div className="dashboardLinks">
+    <div className="dashboardLinks container">
       <ul>
         <li>
           <Link to="/Host">Dashboard</Link>
@@ -12,7 +12,7 @@ const HostNavbar = () => {
           <Link to="/Host/Income">Income</Link>
         </li>
         <li>
-          <Link to="/Host/Vans">Vans</Link>
+          <Link to="/Host/VansHome">Vans</Link>
         </li>
         <li>
           <Link to="/Host/Reviews">Reviews</Link>
