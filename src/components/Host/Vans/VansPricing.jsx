@@ -1,4 +1,3 @@
-
 import image from "../../../assets/Modest_Explorer rent.jpg";
 import "./VansPricing.css"
 import { Link } from "react-router-dom";
@@ -60,4 +59,3 @@ const VansPricing = () => {
 };
 
 export default VansPricing;
-
