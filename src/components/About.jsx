@@ -34,7 +34,7 @@ const About = () => {
               onClick={handleVan}
             >
               Explore Our Vans
-            </button>
+            </button> 
           </div>
         </div>
       </div>
