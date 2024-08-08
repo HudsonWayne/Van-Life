@@ -1,7 +1,6 @@
 import banner from "./../assets/about_banner.png";
 
-
-const  About =() => {
+const About = () => {
   return (
     <div className=" mx-auto  sm:block md:hidden h-80vh">
       <img src={banner} alt="Van Rental Image" className="w-full " />
@@ -32,6 +31,6 @@ const  About =() => {
       </div>
     </div>
   );
-}
+};
 
 export default About;

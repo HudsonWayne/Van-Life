@@ -1,11 +1,5 @@
-
-
 const VansPricing = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default VansPricing
+export default VansPricing;

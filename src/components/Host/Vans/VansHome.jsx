@@ -1,11 +1,5 @@
-
-
 const VansHome = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default VansHome
+export default VansHome;

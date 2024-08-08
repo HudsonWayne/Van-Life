@@ -1,11 +1,5 @@
-
-
 const Vans = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default Vans
+export default Vans;

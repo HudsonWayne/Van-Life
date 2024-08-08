@@ -1,9 +1,7 @@
-import "./../../src/App.css"
+import "./../../src/App.css";
 function Home() {
   return (
-    <div
-      className="h-screen flex flex-col items-center justify-center bg-gray-900 text-white text-center"
-    >
+    <div className="h-screen flex flex-col items-center justify-center bg-gray-900 text-white text-center">
       <h1 className="text-4xl font-bold mb-4">
         You got the travel plans, we got the travel vans.
       </h1>

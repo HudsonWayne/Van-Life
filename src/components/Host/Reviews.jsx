@@ -1,11 +1,5 @@
-
-
 const Reviews = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default Reviews
+export default Reviews;
