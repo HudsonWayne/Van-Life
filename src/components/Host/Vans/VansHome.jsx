@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import HostNavbar from '../HostNavbar';
 import wonderphoto from '../../../assets/Green_Wonder.jpg'
 import beachbum from '../../../assets/Beach_Bum.jpg'
@@ -54,3 +55,10 @@ const CarRental = ({ carData }) => {
 };
 
 export default CarRental;
+=======
+const VansHome = () => {
+  return <div></div>;
+};
+
+export default VansHome;
+>>>>>>> 070208f247cdc714475586db5ea428211f73a90d
