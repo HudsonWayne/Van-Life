@@ -6,9 +6,8 @@ import Vans from "./components/Host/Vans.jsx";
 import Navbar from "./components/Navbar";
 import Host from "./components/Host/Dashboard";
 import Login from "./components/Login";
-import About from "./Components/About.jsx";
-import Income from "./components/Host/Income.jsx";
-// import VansHome from "./components/Host/Vans/VansHome.jsx";
+import About from "./Components/About.jsx"
+import Income from "./components/Host/Income.jsx"
 import VansHome from "./Components/Host/Vans/VansHome.jsx"
 import Reviews from "./components/Host/Reviews.jsx";
 
@@ -27,8 +26,9 @@ const App = () => {
         <Route path="/Host/Reviews" element={<Reviews />} />
       </Routes>
       <Footer />
-    </>
-  );
-};
+      </>
+   );
+}; 
 
 export default App;
+ 
