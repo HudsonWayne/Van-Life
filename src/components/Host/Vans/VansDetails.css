@@ -1,30 +1,28 @@
 @media (min-width: 320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
- 
+ .bb{
+    text-decoration: underline;
+ }
 
-  .link {
-    display: flex;
-    gap: 1.2rem;
+  
 
     ul{display: flex;
     gap: 1.2rem;}
     li{text-decoration: none;
         list-style: none; 
      color: black;} 
+     li:hover {
+       text-decoration: underline;
+     }
     Link {
       text-decoration: none;
     }
-    li {
-      text-decoration: none;
-    }
-    li:hover {
-      text-decoration: underline;
-    }
+   
     .vans-link {
       text-decoration: underline;
       font-weight: bold;
     }
-  }
+  
   .back {
     li {
       color: black;
@@ -63,30 +61,12 @@
           }
        
       }
-      .photos-section{
-        display: flex;
-        flex-direction: column;
-        grid-area: 20px;
-
-        ul{
-            display: flex;
-            gap: 20px;
-        }
-        .image{
-            img{
-               width: 50%; 
-            }
-        }
-      }
+     
       a{text-decoration: none;
     color: black;}
-      .photo{
-        text-decoration: underline;
-      }
+     
       .details{text-decoration: underline !important;}
-      .price{
-        text-decoration: underline;
-      }
+     
     }
   }
 
