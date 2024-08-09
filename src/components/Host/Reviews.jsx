@@ -26,8 +26,8 @@ function Reviews() {
           Last <span className="font-bold">30 days</span>
         </p>
       </div>
-      <img className="mx-auto mb-8" src="src\assets\Group 306.png" alt="Review graph" />
-      <h3 className="text-xl font-bold mb-4">Reviews (2)</h3>
+      <img className='mx-auto mb-8' src="../src/assets/Group 306.png" alt="Reviews graph" />
+      
       {reviewsData.map((review) => (
         <div key={review.id} className="mb-8">
           <div className="flex items-center mb-2">
