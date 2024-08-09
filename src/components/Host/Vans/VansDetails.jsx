@@ -1,3 +1,4 @@
+
 import image from "../../../assets/Modest_Explorer rent.jpg";
 import { Link } from "react-router-dom";
 import "./Vans-Details.css";
@@ -7,6 +8,7 @@ import HostNavbar from "../HostNavbar";
 import Simple from "../../../assets/Modest_Explorer rent.jpg";
 import Beach from "../../../assets/Beach_Bum.jpg";
 import Reliable from "../../../assets/Reliable-Red.jpg";
+
 
 const VansDetails = () => {
   
@@ -47,6 +49,7 @@ const VansDetails = () => {
     vans.map((van) => <vans key={van.id} van={van} />);
   }
   return (
+
     <div className="container">
       <HostNavbar />
       <div className="back">
@@ -111,3 +114,5 @@ const VansDetails = () => {
 };
 
 export default VansDetails;
+
+  
