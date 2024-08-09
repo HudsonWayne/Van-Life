@@ -1,4 +1,5 @@
 
+
 import image from "../../../assets/Modest_Explorer rent.jpg";
 import { Link } from "react-router-dom";
 import "./Vans-Details.css";
@@ -116,3 +117,4 @@ const VansDetails = () => {
 export default VansDetails;
 
   
+

@@ -1,4 +1,5 @@
 
+
 import { Link } from "react-router-dom";
 import Simple from "../../../assets/Modest_Explorer rent.jpg";
 import Beach from "../../../assets/Beach_Bum.jpg";
@@ -123,5 +124,3 @@ const VansPricing = () => {
     </div>
   );
 };
-
-export default VansPricing;

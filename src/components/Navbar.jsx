@@ -1,9 +1,7 @@
-
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { FaRegCircleUser } from "react-icons/fa6";
 import Logo from '../assets/logog.png'
 import '../App.css'
-
 
 const Navbar = () => {
   return (
@@ -24,4 +22,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

@@ -4,11 +4,9 @@ import beachbum from '../../../assets/Beach_Bum.jpg'
 import modest from '../../../assets/Modest_Explorer photos.jpg'
 
 
-
-
 import { Link } from 'react-router-dom';
 
-const CarRental = ({ carData }) => {
+const VansHome= ({ carData }) => {
      carData = [
     {
       id: 1,
@@ -53,4 +51,4 @@ const CarRental = ({ carData }) => {
   );
 };
 
-export default CarRental;
+export default VansHome;

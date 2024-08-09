@@ -1,4 +1,4 @@
-const VanList = ({ vans }) => {
+const Vans = ({ vans }) => {
   vans = [
     {
       id: 1,
@@ -40,4 +40,5 @@ const VanList = ({ vans }) => {
   );
 };
 
-export default VanList;
+export default Vans;
+

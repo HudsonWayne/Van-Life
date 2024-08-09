@@ -1,12 +1,15 @@
 import banner from "./../assets/about_banner.png";
 import { useNavigate } from "react-router-dom";
-const About = () => {
-  const navigate = useNavigate();
 
-  const handleVan = () => {
+
+ 
+
+const About = () => {
+   const handleVan = () => {
     navigate("/Vans"); // Replace '/new-page' with your desired path
     console.log("clicked");
   };
+
   return (
     <div className=" mx-auto  sm:block md:hidden">
       <img src={banner} alt="Van Rental Image" className="w-full " />

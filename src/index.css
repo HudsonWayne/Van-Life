@@ -1,9 +1,5 @@
 @tailwind base;
 @tailwind components;
-
-@tailwind utilities;
-@tailwind utilities;
-
 @tailwind utilities;
 
 /* THE STYLES FOR THE 404 ERROR */
@@ -36,19 +32,40 @@
 
 /* THE STYLES FOR THE DASHBOARD */
 .dashboard {
-    background: #fff7ed;
+  background: #fff7ed;
+  padding-bottom: 1rem;
   button {
     background: transparent;
     border: none;
     font-weight: 600;
+    font-size: 13px;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 20px;
   }
   .dashboardContent {
     .dashboardContainer {
       .dashboardMain {
         .dashboardHeading {
           background: #ffead0;
-          padding-top: 1rem;
-          padding-bottom: 1rem;
+          padding: 1.3rem 1rem;
+
+          h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+          }
+
+          h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            padding-top: 0.5rem;
+          }
+
+          span {
+            font-weight: 500;
+          }
 
           .div {
             display: flex;
@@ -65,7 +82,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          height: 3rem;
+          padding: 1.4rem 1rem;
           background: #ffddb2;
 
           .dashboardReviewScore {
@@ -74,6 +91,7 @@
             gap: 1rem;
 
             .review {
+              font-weight: 700;
               span {
                 opacity: 0.5;
               }
@@ -83,13 +101,12 @@
         .dashboardListedVans {
           display: flex;
           justify-content: space-between;
-          padding-top: 10px;
-          padding-bottom: 10px;
+          padding: 1rem 1rem 8px 1rem;
         }
 
         .dashboardVan {
-          margin: .8rem;
-          padding: 0 10px;
+          margin: 1.2rem;
+          padding: 0.8rem;
           background: #fff;
           display: flex;
           justify-content: space-between;
@@ -100,8 +117,19 @@
             align-items: center;
             width: 100%;
 
-            .dashboardImages{
-                height: 3rem;
+            .dashboardImages {
+              height: 3rem;
+            }
+          }
+          .dashboardVanDetails {
+            padding: 10px;
+
+            h4 {
+              font-weight: 500;
+              padding-bottom: 3px;
+            }
+            p {
+              font-size: 14px;
             }
           }
         }
@@ -113,18 +141,17 @@
 
 /* THE STYLES FOR HOST NAVBAR */
 .dashboardLinks {
-        background: #f7f7f7;
+  padding: 1rem;
 
-        ul {
-          display: flex;
-          text-align: start;
-          gap: 5%;
+  ul {
+    display: flex;
+    text-align: start;
+    gap: 5%;
 
-          li {
-            list-style: none;
-            opacity: 0.5;
-          }
-        }
-      }
+    li {
+      list-style: none;
+      opacity: 0.5;
+    }
+  }
+}
 /* END OF HOST NAVBAR */
-
