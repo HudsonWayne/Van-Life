@@ -1,6 +1,19 @@
 import banner from "./../assets/about_banner.png";
+import { useNavigate } from "react-router-dom";
 
+  
+
+<<<<<<< HEAD
 const About = () => {
+=======
+
+const  About =() => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/Vans");
+  };
+>>>>>>> 3c526c36aff007596c2fa82d3bff1c25de7bc23c
   return (
     <div className=" mx-auto  sm:block md:hidden">
       <img src={banner} alt="Van Rental Image" className="w-full " />
@@ -23,7 +36,10 @@ const About = () => {
           <div className="bg-orange-300 p-6 text-left flex flex-col gap-3 rounded-[10px]">
             <h2 className="text-2xl">Your destination is waiting.</h2>
             <h2 className="text-2xl">Your van is ready</h2>
-            <button className="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button
+              onClick={handleClick}
+              className="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
               Explore Our Vans
             </button>
           </div>
