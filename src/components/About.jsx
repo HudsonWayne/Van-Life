@@ -3,9 +3,6 @@ import { useNavigate } from "react-router-dom";
 
   
 
-<<<<<<< HEAD
-const About = () => {
-=======
 
 const  About =() => {
   const navigate = useNavigate();
@@ -13,7 +10,6 @@ const  About =() => {
   const handleClick = () => {
     navigate("/Vans");
   };
->>>>>>> 3c526c36aff007596c2fa82d3bff1c25de7bc23c
   return (
     <div className=" mx-auto  sm:block md:hidden">
       <img src={banner} alt="Van Rental Image" className="w-full " />
