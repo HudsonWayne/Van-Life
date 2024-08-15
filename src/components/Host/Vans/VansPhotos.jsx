@@ -2,14 +2,12 @@
 import image from "../../../assets/Modest_Explorer rent.jpg";
 import "./VansPhotos.css";
 import { Link } from "react-router-dom";
-// import vans from "./vans";
 import Vans from "./VansHome";
-import HostNavbar from "../HostNavbar";
+import HostNavbar from "../HostNavbar.jsx";
 import Simple from "../../../assets/Modest_Explorer rent.jpg";
 import Beach from "../../../assets/Beach_Bum.jpg";
 import Reliable from "../../../assets/Reliable_Red.jpg";
 import './VansPhotos.css'
-import { Link } from "react-router-dom";
 
 const VansPhotos = () => {
  

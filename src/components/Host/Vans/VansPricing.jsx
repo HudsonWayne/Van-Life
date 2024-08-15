@@ -6,7 +6,6 @@ import Beach from "../../../assets/Beach_Bum.jpg";
 import Reliable from "../../../assets/Reliable_Red.jpg";
 import image from "../../../assets/Modest_Explorer rent.jpg";
 import "./VansPricing.css"
-import { Link } from "react-router-dom";
 
 
 const VansPricing = () => {
@@ -124,3 +123,4 @@ const VansPricing = () => {
     </div>
   );
 };
+export default VansPricing;

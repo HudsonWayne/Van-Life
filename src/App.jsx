@@ -9,9 +9,9 @@ import Login from "./components/Login";
 import About from "./Components/About.jsx"
 import Income from "./components/Host/Income.jsx"
 import VansHome from "./Components/Host/Vans/VansHome.jsx"
-import VansHome from "./Components/Host/Vans/VansDetails.jsx"
-import VansHome from "./Components/Host/Vans/VansPricing.jsx"
-import VansHome from "./Components/Host/Vans/VansPhotos.jsx"
+import VansDetails from "./Components/Host/Vans/VansDetails.jsx"
+import VansPricing from "./Components/Host/Vans/VansPricing.jsx"
+import VansPhotos from "./Components/Host/Vans/VansPhotos.jsx"
 import Reviews from "./components/Host/Reviews.jsx";
 
 
