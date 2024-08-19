@@ -1,10 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"; // No need to import Router here
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home.jsx";
 import Footer from "./components/Footer.jsx";
 import Vans from "./components/Host/Vans.jsx";
 import Navbar from "./components/Navbar.jsx";
-import Host from "./components/Host/Dashboard.jsx";
+import Dashboard from "./components/Host/Dashboard.jsx";
 import Login from "./components/Login.jsx";
 import About from "./components/About.jsx";
 import Income from "./components/Host/Income.jsx";
@@ -16,11 +16,11 @@ import Reviews from "./components/Host/Reviews.jsx";
 
 const App = () => {
   return (
-    <Router>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Host" element={<Host />} />
+        <Route path="/Host" element={<Dashboard />} />
         <Route path="/About" element={<About />} />
         <Route path="/Vans" element={<Vans />} />
         <Route path="/Login" element={<Login />} />
@@ -32,7 +32,7 @@ const App = () => {
         <Route path="/Host/Reviews" element={<Reviews />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 };
 
