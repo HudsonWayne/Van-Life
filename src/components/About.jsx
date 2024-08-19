@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
   
 
 
-const  About =() => {
-  const navigate = useNavigate();
+// const  About =() => {
+//   const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate("/Vans");
-  };
+//   const handleClick = () => {
+//     navigate("/Vans");
+//   };
 
 
  

@@ -9,6 +9,9 @@ import Login from "./components/Login.jsx";
 import About from "./components/About.jsx";
 import Income from "./components/Host/Income.jsx";
 import VansHome from "./components/Host/Vans/VansHome.jsx";
+import VansDetails from "./components/Host/Vans/VansDetails.jsx";
+import VansPricing from "./components/Host/Vans/VansPricing.jsx";
+import VansPhotos from "./components/Host/Vans/VansPhotos.jsx";
 import Reviews from "./components/Host/Reviews.jsx";
 
 const App = () => {
@@ -23,6 +26,9 @@ const App = () => {
         <Route path="/Login" element={<Login />} />
         <Route path="/Host/Income" element={<Income />} />
         <Route path="/Host/Vans" element={<VansHome />} />
+        <Route path="/Host/Vans" element={<VansPhotos />} />
+        <Route path="/Host/Vans" element={<VansDetails />} />
+        <Route path="/Host/Vans" element={<VansPricing />} />
         <Route path="/Host/Reviews" element={<Reviews />} />
       </Routes>
       <Footer />

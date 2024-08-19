@@ -37,7 +37,7 @@ const VansHome= ({ carData }) => {
             {carData.map((car) => (
               <Link
                 key={car.id}
-                to={`/car-rental/${car.id}`}
+                to={`/Details/${car.id}`}
                 className=" shadow-md rounded-md hover:shadow-lg w-[22rem] h-[6rem] bg-green-100 "
               >
                 <div

@@ -40,20 +40,7 @@ const VansPhotos = () => {
                     <span key={van.id}>{van.price}</span>/day
                   </p>
 
-                  <div className="link">
-                    <li>
-                      <Link to="./Dashboard">Dashboard</Link>
-                    </li>
-                    <li>
-                      <Link to="./Income">Income</Link>
-                    </li>
-                    <li>
-                      <Link to="./Vans">Vans</Link>
-                    </li>
-                    <li>
-                      <Link to="./Reviews">Reviews</Link>
-                    </li>
-                  </div>
+                  
                   <div className="back">
                     <a href="">Back to all vans</a>
                   </div>
