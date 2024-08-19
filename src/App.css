@@ -8,3 +8,327 @@
   gap: 4rem;
   flex-direction: column;
 }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+   
+.Navbar{
+    height: 10vh;
+    overflow-x: hidden;
+    background-color: #FFF7ED;
+    color: black;
+    /* width: 100vw; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.Navbar nav ul{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.Navbar nav ul li{
+    list-style: none;
+    color:#252525;
+}
+.logo{
+    height: 12px;
+    width: 53px;
+    margin-top: 7px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    color: #252525;
+}
+.footer{
+    height: 10vh;
+    /* width: 100vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #AAAAAA;
+    background-color: #252525;
+}
+.footer h2{
+font-size: 12px;
+}
+
+/* VanList CSS */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+
+
+.van-list h2 {
+  padding: 1.6rem;
+  margin-left:-12px
+}
+
+.filters {
+  display: flex;
+  margin-bottom: 20px;
+
+}
+
+.filter{
+  margin: 0 2px;
+  /* padding: 10px 20px; */
+  background-color: #f6c72088;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 6rem;
+
+
+}
+.clear-filters{
+  background-color: white;
+  border: none;
+  
+}
+
+ .clear-filters:hover {
+  text-decoration: underline;  
+}
+.filter-Simple:hover{
+  background-color:#ff5722 ;
+  color: white;
+}
+.filter-Luxury:hover{
+  background-color:black ;
+  color: white;
+}
+.filter-Rugged:hover{
+  background-color:#4caf50 ;
+  color: white;
+}
+
+.vans {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.van-card {
+  
+  padding: 10px;
+  width: 184px;
+}
+
+.van-card img {
+  width: 100%;
+  height: auto;
+}
+
+.van-card .text{
+  display: flex;
+  justify-content: space-between;
+}
+.van-card h3, .van-card p {
+  margin: 10px 0;
+
+}
+.van-card h3{
+  font-size: 0.8rem;
+}
+.van-card p{
+  font-size: 0.9rem;
+}
+
+.van-card.tag {
+  color: #fff;
+  border-radius: 5px;
+  display: none;
+  
+}
+
+.tag.Simple {
+  background-color: #ff5722;
+}
+
+.tag.Luxury {
+  background-color: black;
+}
+
+.tag.Rugged {
+  background-color: #4caf50;
+}
+
+
+/* Van details css */
+.van-detail {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #f8f4f0;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.van-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.van-info {
+  text-align: left;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #ff8c42;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tag.simple {
+  background-color: #ff8c42;
+}
+
+.tag.rugged {
+  background-color: #6b705c;
+}
+
+.tag.luxury {
+  background-color: #457b9d;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.rent-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff8c42;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) { 
+     
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+    .Navbar{
+        display: none;
+    }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) { 
+
+}
