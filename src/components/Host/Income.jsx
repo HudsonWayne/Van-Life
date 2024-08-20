@@ -12,29 +12,27 @@ const data = [
 const maxValue = 5000;
 
 const money = [
-<<<<<<< HEAD
+
   { text: "$720", date: "1/12/22 " },
-=======
   { text: "$720", date: "1/12/22" },
->>>>>>> 070208f247cdc714475586db5ea428211f73a90d
   { text: "$560", date: "10/11/22" },
   { text: "$980", date: "23/11/22" },
 ];
 
 const Income = () => {
   return (
-<<<<<<< HEAD
+
 
     <div className="p-6 sm:block md:block lg:hidden bg-[#FFF7ED] rounded-lg shadow-md w-full  mb-12 mt-12">
 
       <div className="flex gap-4 flex-col justify-center w-full min-h-[200px] ">
         <h2 className=" text-2xl font-bold">Income</h2>
-=======
+
     <div className="p-6 sm:block md:block lg:hidden bg-[#FFF7ED] rounded-lg shadow-md w-full mb-12">
       <HostNavbar />
       <div className="flex gap-4 flex-col justify-center w-full min-h-[200px]">
         <h2 className="text-2xl font-bold">Income</h2>
->>>>>>> 070208f247cdc714475586db5ea428211f73a90d
+
         <p>
           Last <span className="underline">30 days</span>
         </p>
@@ -75,13 +73,12 @@ const Income = () => {
           {data.map((item, index) => {
             const height = (item.value / maxValue) * 100;
             const barColor =
-<<<<<<< HEAD
+
               index === data.length - 2
                 ? "bg-[#FF8227]"
                 : index === data.length - 1
                 ? "bg-[#FF8227]"
                 : "bg-[#FFEACB]";
-=======
               index === data.length - 2 || index === data.length - 1
                 ? "bg-[#FF8227]"
                 : "bg-[#FFEACB]";
@@ -112,7 +109,6 @@ const Income = () => {
         </div>
         <div className="mt-4">
           {money.map((dollar, index) => {
->>>>>>> 070208f247cdc714475586db5ea428211f73a90d
             return (
               <div
                 key={index}
@@ -128,12 +124,11 @@ const Income = () => {
         </div>
       </div>
     </div>
+    </div>
+    </div>
   );
 };
 
 export default Income;
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 070208f247cdc714475586db5ea428211f73a90d
