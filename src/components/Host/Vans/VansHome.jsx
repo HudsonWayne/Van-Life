@@ -2,6 +2,7 @@ import HostNavbar from '../HostNavbar';
 import wonderphoto from '../../../assets/Green_Wonder.jpg'
 import beachbum from '../../../assets/Beach_Bum.jpg'
 import modest from '../../../assets/Modest_Explorer photos.jpg'
+import VansDetails from '../../../components/Host/Vans/VansDetails'
 
 
 import { Link } from 'react-router-dom';
@@ -37,7 +38,7 @@ const VansHome= ({ carData }) => {
             {carData.map((car) => (
               <Link
                 key={car.id}
-                to={`/Details/${car.id}`}
+                to={`/VansDetails/${car.id}`}
                 className=" shadow-md rounded-md hover:shadow-lg w-[22rem] h-[6rem] bg-green-100 "
               >
                 <div
