@@ -1,5 +1,11 @@
-const Reviews = () => {
-  return <div></div>;
-};
+import HostNavbar from "./HostNavbar"
 
-export default Reviews;
+const Reviews = () => {
+  return (
+    <div>
+      <HostNavbar/>
+    </div>
+  )
+}
+
+export default Reviews
