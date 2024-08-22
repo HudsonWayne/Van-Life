@@ -18,7 +18,6 @@ const App = () => {
   return (
     <>
       <Navbar />
-      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Host" element={<Dashboard />} />
@@ -27,9 +26,6 @@ const App = () => {
         <Route path="/Login" element={<Login />} />
         <Route path="/Host/Income" element={<Income />} />
         <Route path="/Host/Vans" element={<VansHome />} />
-        <Route path="/Host/Vans" element={<VansPhotos />} />
-        <Route path="/Host/Vans" element={<VansDetails />} />
-        <Route path="/Host/Vans" element={<VansPricing />} />
         <Route path="/Host/Reviews" element={<Reviews />} />
       </Routes>
       <Footer />
