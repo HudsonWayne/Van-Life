@@ -41,7 +41,4 @@ const Vans = ({ vans }) => {
 };
 
 export default Vans;
-<<<<<<< HEAD
-=======
 
->>>>>>> a0b6fdbbddc9f4e2969adc4d6ce86f380702b77c
