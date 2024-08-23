@@ -1,4 +1,16 @@
-import { Routes, Route } from "react-router-dom"; // No need to import Router here
+<<<<<<< HEAD
+import './App.css'
+
+function App() {
+
+  return (
+    <>
+      
+    </>
+  )
+}
+=======
+import {  Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home.jsx";
 import Footer from "./components/Footer.jsx";
@@ -27,5 +39,6 @@ const App = () => {
     </>
   );
 };
+>>>>>>> b81fcad328f1cd16bed564331042aa6965b0c3ac
 
 export default App;

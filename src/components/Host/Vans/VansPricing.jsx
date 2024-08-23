@@ -73,3 +73,4 @@ const VansPricing = () => {
   );
 };
 export default VansPricing;
+

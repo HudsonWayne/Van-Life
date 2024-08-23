@@ -1,4 +1,3 @@
-
 import image from "../../../assets/Modest_Explorer rent.jpg";
 import "./VansPhotos.css";
 import { Link } from "react-router-dom";
