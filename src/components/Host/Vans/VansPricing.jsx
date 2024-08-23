@@ -1,27 +1,24 @@
-
-
-import { Link } from "react-router-dom";
-import Simple from "../../../assets/Modest_Explorer rent.jpg";
-import Beach from "../../../assets/Beach_Bum.jpg";
-import Reliable from "../../../assets/Reliable_Red.jpg";
 import image from "../../../assets/Modest_Explorer rent.jpg";
 import HostNavbar from "../HostNavbar";
 import "./VansPricing.css";
 import VansHome from "./VansHome";
-import Navbar from  "../HostNavbar"
+import Navbar from "../HostNavbar";
 import { Link } from "react-router-dom";
+import Simple from "../../../assets/Modest_Explorer rent.jpg";
+import Beach from "../../../assets/Beach_Bum.jpg";
+import Reliable from "../../../assets/Reliable_Red.jpg";
 
 const VansPricing = () => {
-  {
-    vans.map((van) => <vans key={van.id} van={van} />);
-  }
+ 
+
   return (
     <div className="container">
-      <div className="link">
-        <HostNavbar />
-      </div>
+      <HostNavbar />
+
       <div className="back">
-        <Link to="/Vans">Back to all vans</Link>
+        <li>
+          <Link to="/Vans">Back to all vans</Link>
+        </li>
       </div>
 
       <div className="van-card">
@@ -33,10 +30,12 @@ const VansPricing = () => {
                   <img key={van.id} src={van.image} alt="Modest Explorer" />
                 </div>
                 <div className="text-container col-md-6">
-                  <button className="bnt9">{van.category}</button>
-                  <h2>{van.name}</h2>
+                  <button className="bnt9" key={van.id}>
+                    {van.category}
+                  </button>
+                  <h2 key={van.id}>{van.name}</h2>
                   <p>
-                    <span>{van.price}</span>/day
+                    <span key={van.id}>{van.price}</span>/day
                   </p>
                 </div>
               </div>
@@ -59,9 +58,7 @@ const VansPricing = () => {
               </ul>
               <div className="prices-tag">
                 <h2>
-                  <span>
-                    key={van.id} ${van.price}
-                  </span>
+                  <span key={van.id}>${van.price}</span>
                   /day
                 </h2>
               </div>
@@ -72,5 +69,5 @@ const VansPricing = () => {
     </div>
   );
 };
-export default VansPricing;
 
+export default VansPricing;
