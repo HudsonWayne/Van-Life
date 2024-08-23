@@ -2,7 +2,7 @@ import image from "../../../assets/Modest_Explorer rent.jpg";
 import { Link } from "react-router-dom";
 import "./Vans-Details.css";
 import "./vans";
-import HomeVan from "./VansHome";
+import HomeVan from "../VansHome";
 import HostNavbar from "../HostNavbar";
 import Simple from "../../../assets/Modest_Explorer rent.jpg";
 import Beach from "../../../assets/Beach_Bum.jpg";
