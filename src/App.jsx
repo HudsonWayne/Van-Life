@@ -1,14 +1,7 @@
 
 import './App.css'
 
-function App() {
 
-  return (
-    <>
-      
-    </>
-  )
-}
 
 import {  Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
