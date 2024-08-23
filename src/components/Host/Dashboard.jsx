@@ -1,4 +1,4 @@
-import React from "react";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Beach from "../../assets/Beach_Bum photos.jpg";
 import Green from "../../assets/Green_Wonder photos.jpg";
@@ -8,21 +8,25 @@ import HostNavbar from "./HostNavbar";
 const Dashboard = () => {
   const vans = [
     {
+      id: 1,  // Added unique id for each van
       image: Modest,
       name: "Modest Explorer",
       price: "$60/day",
     },
     {
+      id: 2,  // Added unique id for each van
       image: Beach,
       name: "Beach Bum",
       price: "$80/day",
     },
     {
+      id: 3,  // Added unique id for each van
       image: Green,
       name: "Green Wonder",
       price: "$70/day",
     },
   ];
+
   return (
     <div className="dashboard sm:block md:hidden">
       <main className="dashboardContent">
@@ -73,8 +77,8 @@ const Dashboard = () => {
                 View all
               </button>
             </div>
-            {vans.map((van, index) => (
-              <div className="dashboardVan">
+            {vans.map((van) => (
+              <div key={van.id} className="dashboardVan">  {/* Added key prop */}
                 <div className="dashboardPictureDetails">
                   <img
                     src={van.image}
