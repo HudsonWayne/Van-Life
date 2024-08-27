@@ -36,10 +36,10 @@
           .first {
             display: flex;
             .image-container {
-              width: 50%;
+             
            
               img {
-                width: 100%;
+                width: 50vw;
               }
             }
             .text-container {
