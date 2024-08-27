@@ -22,7 +22,7 @@ const VansDetails = () => {
               <div className="row">
                 <div className="first">
                   <div className="image-container col-md-6">
-                    <img src={image} alt="" />
+                    <img src={image} alt="img" />
                   
                   </div>
                   <div className="text-container col-md-6">
