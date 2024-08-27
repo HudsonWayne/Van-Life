@@ -25,7 +25,7 @@ const Login = () => {
       return;
     }
 
-    history.push((window.location.href = "/Vans"));
+    history.push((window.location.href ="/Vans"));
   };
 
   return (

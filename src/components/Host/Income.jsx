@@ -19,9 +19,9 @@ const money = [
 
 const Income = () => {
   return (
-    <div className="bg-[#FFF7ED] vin">
+    <div className="bg-[#FFF7ED]">
       <HostNavbar />
-      <div className="flex gap-4 flex-col justify-center w-full min-h-[200px]">
+      <div className=" flex gap-4 flex-col justify-center w-full min-h-[200px]">
         <h2 className="text-2xl font-bold">Income</h2>
         <p>
           Last <span className="underline">30 days</span>
