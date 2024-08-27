@@ -1,8 +1,31 @@
+import image from "../../../assets/Modest_Explorer rent.jpg";
+import { Link } from "react-router-dom";
+import "./Vans-Details.css";
+import "./vans";
+import HomeVan from "../VansHome";
+import HostNavbar from "../HostNavbar";
 import React, { useState } from "react";
 import Simple from "../../../assets/Modest_Explorer rent.jpg";
 import Reliable from "../../../assets/Reliable_Red.jpg";
 import Luxury from "../../../assets/The_Cruiser.jpg";
 
+const VansDetails = () => {
+  const prices = [
+    {
+      id: 1,
+      price: 60,
+    },
+    {
+      id: 2,
+      price: 80,
+    },
+    {
+      id: 3,
+      price: 100,
+    },
+  ];
+
+  const van = [
 const VanCard = ({ van }) => {
   const [activeTab, setActiveTab] = useState("details");
 
@@ -131,6 +154,65 @@ const VanList = () => {
   ];
 
   return (
+    <div className="container">
+      <HostNavbar />
+      <div className="back">
+        <li>
+          <Link to="/Vans">Back to all vans</Link>
+        </li>
+      </div>
+      <div className="van-card">
+        <div className="image-text">
+          <div className="container">
+            <div className="row">
+              <div className="first">
+                <div className="image-container col-md-6">
+                  <img key={van.id} src={van.image} alt="Modest Explorer" />
+                </div>
+                <div className="text-container col-md-6">
+                  <button className="bnt9">{van.category}</button>
+                  <h2 key={van.id}>{van.name}</h2>
+                  <p>
+                    <span key={van.id}>{van.price}</span>/day
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <ul className="link">
+              <li>
+                <Link to="/VansDetails" className="details">
+                  Details
+                </Link>
+              </li>
+              <li>  
+                <Link to="/VansPhotos">Photos</Link>
+              </li>
+              <li>
+                <Link to="/VansPricing">Pricing</Link>
+              </li>
+            </ul>
+
+            <div className="details-section">
+              <h2 className="van-name " key={van.id}>
+                <span>Name:</span>
+                {van.name}
+              </h2>
+              <p className="van-category" key={van.id}>
+                <span>Category:</span>Category: {van.category}
+              </p>
+              <p className="van-description" key={van.id}>
+                <span>Description:</span>
+                {van.description}
+              </p>
+              <p className="van-price" key={van.id}>
+                <span>Visibility:</span>
+                {van.Visibility}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {vans.map((van, index) => (
         <VanCard key={index} van={van} />
