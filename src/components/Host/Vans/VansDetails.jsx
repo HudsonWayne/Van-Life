@@ -1,9 +1,3 @@
-import image from "../../../assets/Modest_Explorer rent.jpg";
-import { Link } from "react-router-dom";
-import "./Vans-Details.css";
-import "./vans";
-import HomeVan from "../VansHome";
-import HostNavbar from "../HostNavbar";
 import React, { useState } from "react";
 import Simple from "../../../assets/Modest_Explorer rent.jpg";
 import Reliable from "../../../assets/Reliable_Red.jpg";
