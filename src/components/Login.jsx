@@ -21,11 +21,11 @@ const Login = () => {
       return;
     }
     if (!/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password)) {
-      setErrorMessage("Password must contain special character");
+      setErrorMessage("Password must contain a special character");
       return;
     }
 
-    history.push(window.location.href = "/Vans");
+    history.push((window.location.href = "/Vans"));
   };
 
   return (

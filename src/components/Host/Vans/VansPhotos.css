@@ -1,37 +1,39 @@
 @media (min-width: 320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
  
-
+.photo{
+    text-decoration: underline;
+}
   .link {
     display: flex;
     gap: 1.2rem;
-
-    ul{display: flex;
-    gap: 1.2rem;}
-    li{text-decoration: none; 
-     color: black;
-    list-style: none;} 
-    Link {
-      text-decoration: none;
-    }
-    li {
-      text-decoration: none;
-    }
-    li:hover {
-      text-decoration: underline;
-    }
-    .vans-link {
-      text-decoration: underline;
-      font-weight: bold;
-    }
   }
+  li {
+    text-decoration: none;
+    color: black;
+    list-style: none;
+  }
+  li:hover {
+    text-decoration: underline;
+  }
+  Link {
+    text-decoration: none;
+  }
+ 
+  .vans-link {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
   .back {
     li {
+      text-decoration: underline;
       color: black;
     }
   }
 
-  .van-card { background: white;
+  .van-card {
+    background: white;
     .image-text {
       .container {
         .row {
@@ -39,7 +41,7 @@
             display: flex;
             .image-container {
               width: 50%;
-           
+
               img {
                 width: 100%;
               }
@@ -47,11 +49,15 @@
             .text-container {
               display: flex;
               flex-direction: column;
-              h2{margin: 0;}
-              p{margin: 0;}
-            gap:10px;
+              h2 {
+                margin: 0;
+              }
+              p {
+                margin: 0;
+              }
+              gap: 10px;
 
-              button{
+              button {
                 background: #e17654;
                 border: none;
                 color: #ffead0;
@@ -61,36 +67,36 @@
               }
             }
           }
-       
-      }
-      .photos-section{
-        display: flex;
-        flex-direction: column;
-        grid-area: 20px;
+        }
+        .photos-section {
+          display: flex;
+          flex-direction: column;
+          grid-area: 20px;
 
-        ul{
+          ul {
             display: flex;
             gap: 20px;
-        }
-        .image{
-            img{
-               width: 50%; 
+          }
+          .image {
+            img {
+              width: 50%;
             }
+          }
         }
-      }
-      a{text-decoration: none;
-    color: black;}
-      .photo{
-        text-decoration: underline;
-      }
-      .details{text-decoration: underline !important;}
-      .price{
-        text-decoration: underline;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        .photo {
+          text-decoration: underline;
+        }
+        /* .details{text-decoration: underline !important;} */
+        .price {
+          text-decoration: underline;
+        }
       }
     }
   }
-
-}
 }
 @media (min-width: 480px) {
   /* smartphones, Android phones, landscape iPhone */

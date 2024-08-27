@@ -1,66 +1,57 @@
-import HostNavbar from '../HostNavbar';
-import wonderphoto from '../../../assets/Green_Wonder.jpg'
-import beachbum from '../../../assets/Beach_Bum.jpg'
-import modest from '../../../assets/Modest_Explorer photos.jpg'
 
-
-import { Link } from 'react-router-dom';
-
-const CarRental = ({ carData }) => {
-     carData = [
+function VansHome() {
+  const prices = [
     {
       id: 1,
-      name: 'Modest Explorer',
       price: 60,
-      image: modest,
     },
     {
       id: 2,
-      name: 'Beach Bum',
       price: 80,
-      image: beachbum,
     },
     {
       id: 3,
-      name: 'Green Wonder',
-      price: 70,
-      image: wonderphoto,
+      price: 100,
+    },
+  ];
+
+  const vans = [
+    {
+      id: 1,
+      image: "/src/assets/Modest_Explorer rent.jpg",
+      name: "Modest ",
+      Category: "Simple",
+      Description:
+        "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
+      Visibility: " Public",
+    },
+    {
+      id: 2,
+      image: "/src/assets/Beach_Bum.jpg",
+      name: "Beach Bum ",
+      Category: "Rugged",
+      Description:
+        "Beach Bum is a van inspired by surfers and travelers. It was created to be a portable home away from home, but with some cool features in it you won't find in an ordinary camper.",
+      Visibility: " Public",
+    },
+    {
+      id: 3,
+      image: "/src/assets/Reliable_Red.jpg",
+      name: "Reliable Red ",
+      Category: "Luxury",
+      Description:
+        "Reliable Red is a van that was made for travelling. The inside is comfortable and cozy, with plenty of space to stretch out in. There's a small kitchen, so you can cook if you need to. You'll feel like home as soon as you step out of it.",
+      Visibility: " Public",
     },
   ];
   return (
-    <div className="vanshome">
-      <HostNavbar />
-      <div className="container mx-auto px-4 py-8 w-[25rem]  sm:block md:hidden">
-        <div className="flex flex-col justify-center">
-          <h1 className="text-3xl font-bold mb-4">Your listed vans</h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
-            {carData.map((car) => (
-              <Link
-                key={car.id}
-                to={`/car-rental/${car.id}`}
-                className=" shadow-md rounded-md hover:shadow-lg w-[22rem] h-[6rem] bg-green-100 "
-              >
-                <div
-                  key={car.id}
-                  className="flex flex-row items-center w-[100%] h-[100%] bg-white"
-                >
-                  <img
-                    src={car.image}
-                    alt={car.name}
-                    className=" object-cover h-[80%] mb-2 pl-2 pr-2"
-                  />
-                  <div className="flex flex-col justify-center">
-                    <h2 className="text-xl font-semibold mb-2">{car.name}</h2>
-                    <p className="text-gray-700 mb-1">${car.price}/day</p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {vans.map((van) => (
+        <vans key={van.id} van={van} />
+      ))}
     </div>
   );
-};
+}
 
-export default CarRental;
+export default VansHome;
+ 

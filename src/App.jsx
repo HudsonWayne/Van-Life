@@ -1,5 +1,7 @@
-import "./App.css";
-import { Routes, Route } from "react-router-dom"; // No need to import Router here
+
+import './App.css'
+
+import {  Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home.jsx";
 import Footer from "./components/Footer.jsx";
@@ -30,5 +32,6 @@ const App = () => {
     </>
   );
 };
+
 
 export default App;
