@@ -1,3 +1,4 @@
+import "./App.css";
 import { Routes, Route } from "react-router-dom"; // No need to import Router here
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home.jsx";
@@ -10,7 +11,6 @@ import About from "./components/About.jsx";
 import Income from "./components/Host/Income.jsx";
 import VansHome from "./components/Host/Vans/VansHome.jsx";
 import Reviews from "./components/Host/Reviews.jsx";
-import './App.css'
 
 const App = () => {
   return (
