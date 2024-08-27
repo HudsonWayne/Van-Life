@@ -19,7 +19,7 @@ const money = [
 
 const Income = () => {
   return (
-    <div className="bg-[#FFF7ED]">
+    <div className="bg-[#FFF7ED] vin">
       <HostNavbar />
       <div className="p-6 sm:block md:block lg:hidden bg-[#FFF7ED] rounded-lg shadow-md w-full mb-12">
         <div className="flex gap-4 flex-col justify-center w-full min-h-[200px]">
