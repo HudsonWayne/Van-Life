@@ -24,7 +24,7 @@ const VansDetails = () => {
     },
   ];
 
-  const vans = [
+  const van = [
     {
       id: 1,
       image: Simple,
@@ -89,7 +89,7 @@ const VansDetails = () => {
                   Details
                 </Link>
               </li>
-              <li>
+              <li>  
                 <Link to="/VansPhotos">Photos</Link>
               </li>
               <li>

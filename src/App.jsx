@@ -15,11 +15,14 @@ import About from "./components/About.jsx";
 import Income from "./components/Host/Income.jsx";
 import VansHome from "./components/Host/Vans/VansHome.jsx";
 import Reviews from "./components/Host/Reviews.jsx";
+import VansPricing from './components/Host/Vans/VansPricing.jsx';
+import VansDetails from './components/Host/Vans/VansDetails.jsx';
 
 const App = () => {
   return (
     <>
       <Navbar />
+      <VansPricing/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Host" element={<Dashboard />} />
