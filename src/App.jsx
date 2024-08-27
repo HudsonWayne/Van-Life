@@ -10,6 +10,7 @@ import About from "./components/About.jsx";
 import Income from "./components/Host/Income.jsx";
 import VansHome from "./components/Host/Vans/VansHome.jsx";
 import Reviews from "./components/Host/Reviews.jsx";
+import './App.css'
 
 const App = () => {
   return (
