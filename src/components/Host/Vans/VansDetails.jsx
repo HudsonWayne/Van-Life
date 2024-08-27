@@ -4,9 +4,10 @@ import "./Vans-Details.css";
 import "./vans";
 import HomeVan from "../VansHome";
 import HostNavbar from "../HostNavbar";
+import React, { useState } from "react";
 import Simple from "../../../assets/Modest_Explorer rent.jpg";
-import Beach from "../../../assets/Beach_Bum.jpg";
-import Reliable from "../../../assets/Reliable-Red.jpg";
+import Reliable from "../../../assets/Reliable_Red.jpg";
+import Luxury from "../../../assets/The_Cruiser.jpg";
 
 const VansDetails = () => {
   const prices = [
@@ -25,38 +26,133 @@ const VansDetails = () => {
   ];
 
   const van = [
-    {
-      id: 1,
-      image: Simple,
-      name: "Modest ",
-      Category: "Simple",
-      Description:
-        "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
-      Visibility: " Public",
-    },
-    {
-      id: 2,
+const VanCard = ({ van }) => {
+  const [activeTab, setActiveTab] = useState("details");
 
-      image: Beach,
-      name: "Beach Bum ",
-      Category: "Rugged",
-      Description:
-        "Beach Bum is a van inspired by surfers and travelers. It was created to be a portable home away from home, but with some cool features in it you won't find in an ordinary camper.",
-      Visibility: " Public",
+  const renderContent = () => {
+    switch (activeTab) {
+      case "details":
+        return (
+          <div className="mt-4 w-full">
+            <p>
+              <span className="font-semibold">Name:</span> {van.name}
+            </p>
+            <p>
+              <span className="font-semibold">Category:</span> {van.category}
+            </p>
+            <p>
+              <span className="font-semibold">Description:</span>{" "}
+              {van.description}
+            </p>
+            <p>
+              <span className="font-semibold">Visibility:</span>{" "}
+              {van.visibility}
+            </p>
+          </div>
+        );
+      case "pricing":
+        return (
+          <div className="mt-4">
+            <p className="text-2xl">
+              ${van.price.toFixed(2)}
+              <span className="text-sm font-light">/day</span>
+            </p>
+          </div>
+        );
+      case "photos":
+        return (
+          <div className="mt-4">
+            {van.photos.map((photo, index) => (
+              <img
+                key={index}
+                src={photo}
+                alt={`${van.name} photo ${index + 1}`}
+                className="rounded-sm mb-2 w-full" 
+              />
+            ))}
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <div className="max-w-sm mx-auto bg-white p-6 rounded-lg shadow-md">
+      <img src={van.mainImage} alt={van.name} className="rounded-t-lg w-full" />{" "}
+      {/* Added w-full class here */}
+      <div className="mt-4">
+        <span className="text-sm bg-orange-200 text-orange-700 px-2 py-1 rounded-full uppercase tracking-wide font-semibold">
+          {van.category}
+        </span>
+        <h2 className="text-xl font-bold mt-2">{van.name}</h2>
+        <p className="text-lg font-semibold mt-1">${van.price}/day</p>
+      </div>
+      <div className="mt-4 flex border-b">
+        <button
+          className={`flex-1 py-2 text-center ${
+            activeTab === "details" ? "border-b-2 border-black font-bold" : ""
+          }`}
+          onClick={() => setActiveTab("details")}
+        >
+          Details
+        </button>
+        <button
+          className={`flex-1 py-2 text-center ${
+            activeTab === "pricing" ? "border-b-2 border-black font-bold" : ""
+          }`}
+          onClick={() => setActiveTab("pricing")}
+        >
+          Pricing
+        </button>
+        <button
+          className={`flex-1 py-2 text-center ${
+            activeTab === "photos" ? "border-b-2 border-black font-bold" : ""
+          }`}
+          onClick={() => setActiveTab("photos")}
+        >
+          Photos
+        </button>
+      </div>
+      {renderContent()}
+    </div>
+  );
+};
+
+const VanList = () => {
+  const vans = [
+    {
+      name: "Modest Explorer",
+      category: "Simple",
+      description:
+        "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank, and a kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
+      visibility: "Public",
+      price: 60.0,
+      mainImage: Simple,
+      photos: [Simple],
     },
     {
-      id: 3,
-      image: Reliable,
-      name: "Reliable Red ",
-      Category: "Luxury",
-      Description:
-        "Reliable Red is a van that was made for traveling. The inside is comfortable and cozy, with plenty of space to stretch out in. There's a small kitchen, so you can cook if you need to. You'll feel like home as soon as you step out of it.",
-      Visibility: " Public",
+      name: "Reliable Red",
+      category: "Reliable",
+      description:
+        "The Reliable Red is perfect for long journeys and rough terrains. It’s equipped with a robust engine and all the necessary safety features.",
+      visibility: "Public",
+      price: 90.0,
+      mainImage: Reliable,
+      photos: [Reliable],
+    },
+    {
+      name: "Luxury Cruiser",
+      category: "Luxury",
+      description:
+        "The Luxury Cruiser is built for those who want to explore in style. It features a high-end interior, a powerful engine, and all the amenities you could need for a long journey.",
+      visibility: "Public",
+      price: 120.0,
+      mainImage: Luxury,
+      photos: [Luxury],
     },
   ];
-  {
-    vans.map((van) => <vans key={van.id} van={van} />);
-  }
+
   return (
     <div className="container">
       <HostNavbar />
@@ -117,8 +213,12 @@ const VansDetails = () => {
           </div>
         </div>
       </div>
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {vans.map((van, index) => (
+        <VanCard key={index} van={van} />
+      ))}
     </div>
   );
 };
 
-export default VansDetails;
+export default VanList;
