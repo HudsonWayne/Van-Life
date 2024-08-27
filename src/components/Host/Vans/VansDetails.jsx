@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Simple from "../../../assets/Modest_Explorer rent.jpg";
+import Reliable from "../../../assets/Reliable_Red.jpg";
+import Luxury from "../../../assets/The_Cruiser.jpg";
 
 const VanCard = ({ van }) => {
   const [activeTab, setActiveTab] = useState("details");
@@ -7,7 +10,7 @@ const VanCard = ({ van }) => {
     switch (activeTab) {
       case "details":
         return (
-          <div className="mt-4">
+          <div className="mt-4 w-full">
             <p>
               <span className="font-semibold">Name:</span> {van.name}
             </p>
@@ -41,7 +44,7 @@ const VanCard = ({ van }) => {
                 key={index}
                 src={photo}
                 alt={`${van.name} photo ${index + 1}`}
-                className="rounded-md mb-2"
+                className="rounded-sm mb-2 w-full" 
               />
             ))}
           </div>
@@ -53,7 +56,8 @@ const VanCard = ({ van }) => {
 
   return (
     <div className="max-w-sm mx-auto bg-white p-6 rounded-lg shadow-md">
-      <img src={van.mainImage} alt={van.name} className="rounded-t-lg" />
+      <img src={van.mainImage} alt={van.name} className="rounded-t-lg w-full" />{" "}
+      {/* Added w-full class here */}
       <div className="mt-4">
         <span className="text-sm bg-orange-200 text-orange-700 px-2 py-1 rounded-full uppercase tracking-wide font-semibold">
           {van.category}
@@ -101,37 +105,28 @@ const VanList = () => {
         "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank, and a kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
       visibility: "Public",
       price: 60.0,
-      mainImage: "https://via.placeholder.com/300", // Replace with actual image URLs
-      photos: [
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-      ],
+      mainImage: Simple,
+      photos: [Simple],
     },
     {
-      name: "Adventure Seeker",
-      category: "Luxury",
+      name: "Reliable Red",
+      category: "Reliable",
       description:
-        "The Adventure Seeker is built for those who want to explore in style. It features a high-end interior, a powerful engine, and all the amenities you could need for a long journey.",
-      visibility: "Public",
-      price: 120.0,
-      mainImage: "https://via.placeholder.com/300", // Replace with actual image URLs
-      photos: [
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-      ],
-    },
-    {
-      name: "Family Cruiser",
-      category: "Comfort",
-      description:
-        "Perfect for family road trips, the Family Cruiser comes equipped with ample seating, entertainment options, and plenty of storage space.",
+        "The Reliable Red is perfect for long journeys and rough terrains. It’s equipped with a robust engine and all the necessary safety features.",
       visibility: "Public",
       price: 90.0,
-      mainImage: "https://via.placeholder.com/300", // Replace with actual image URLs
-      photos: [
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-      ],
+      mainImage: Reliable,
+      photos: [Reliable],
+    },
+    {
+      name: "Luxury Cruiser",
+      category: "Luxury",
+      description:
+        "The Luxury Cruiser is built for those who want to explore in style. It features a high-end interior, a powerful engine, and all the amenities you could need for a long journey.",
+      visibility: "Public",
+      price: 120.0,
+      mainImage: Luxury,
+      photos: [Luxury],
     },
   ];
 
