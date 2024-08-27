@@ -87,6 +87,7 @@ table {
 }
 .footer{
     height: 10vh;
+    /* width: 100vw; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,29 +117,34 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-.van-list {
-  padding: 20px;
-}
+
 
 .van-list h2 {
-  padding-left: 1.6rem;
+  padding: 1.6rem;
+  margin-left:-12px
 }
 
 .filters {
   display: flex;
-  margin: 20px 0.8rem;
+  margin-bottom: 20px;
+
 }
 
 .filter{
-  margin: 0 10px;
-  padding: 10px 20px;
+  margin: 0 2px;
+  /* padding: 10px 20px; */
   background-color: #f6c72088;
   border: none;
   cursor: pointer;
+  font-size: 1rem;
+  width: 6rem;
+
+
 }
 .clear-filters{
   background-color: white;
   border: none;
+  
 }
 
  .clear-filters:hover {
@@ -160,14 +166,13 @@ header nav a:hover {
 .vans {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   gap: 0.3rem;
 }
 
 .van-card {
-  margin: 10px;
+  
   padding: 10px;
-  width: 176px;
+  width: 184px;
 }
 
 .van-card img {
@@ -191,11 +196,9 @@ header nav a:hover {
 }
 
 .van-card.tag {
-  /* display: inline-block; */
-  /* padding: 5px 10px; */
   color: #fff;
   border-radius: 5px;
-  /* margin-left: -.5rem; */
+  display: none;
   
 }
 
@@ -248,7 +251,6 @@ nav a {
   background-color: #ff8c42;
   color: white;
   font-weight: bold;
-  margin-left: 0.8rem;
   margin-bottom: 10px;
 }
 

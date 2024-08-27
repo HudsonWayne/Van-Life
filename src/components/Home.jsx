@@ -5,7 +5,6 @@ function Home() {
 
   const handleVan = () => {
     navigate("/Vans"); // Replace '/new-page' with your desired path
-    console.log("clicked");
   };
   return (
     <div className="h-screen flex flex-col items-center justify-center bg-gray-900 text-white text-center">
