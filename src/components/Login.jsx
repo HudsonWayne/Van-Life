@@ -17,7 +17,7 @@ const Login = () => {
       return;
     }
     if (password.length < 8) {
-      setErrorMessage("Password must be at least 8 characters");
+      setErrorMessage("Password must at least be 8 characters");
       return;
     }
     if (!/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password)) {
@@ -49,7 +49,7 @@ const Login = () => {
             <input
               type="password"
               id="password"
-              placeholder="Password"
+              placeholder="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full px-3 py-2 border rounded shadow focus:outline-none focus:ring-2 focus:ring-indigo-600"
@@ -60,7 +60,7 @@ const Login = () => {
           )}
           <button
             type="submit"
-            className="w-full bg-[#FF8227] text-white py-2 px-4 rounded hover:bg-[#c56e30]"
+            className="w-full bg-[#FF8227] text-white py-2 px-4 rounded hover:bg-[#c56e30] "
           >
             Sign In
           </button>

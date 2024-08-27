@@ -1,34 +1,39 @@
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Beach from "../../assets/Beach_Bum photos.jpg";
 import Green from "../../assets/Green_Wonder photos.jpg";
 import Modest from "../../assets/Modest_Explorer photos.jpg";
-import HostNavbar from './HostNavbar';
+import HostNavbar from "./HostNavbar";
 
 const Dashboard = () => {
   const vans = [
     {
+      id: 1,  // Added unique id for each van
       image: Modest,
       name: "Modest Explorer",
       price: "$60/day",
     },
     {
+      id: 2,  // Added unique id for each van
       image: Beach,
       name: "Beach Bum",
       price: "$80/day",
     },
     {
+      id: 3,  // Added unique id for each van
       image: Green,
       name: "Green Wonder",
       price: "$70/day",
     },
   ];
+
   return (
     <div className="dashboard sm:block md:hidden">
       <main className="dashboardContent">
         <div className="dashboardContainer">
-          <HostNavbar/>
+          <HostNavbar />
           <div className="dashboardMain">
-            <div className="dashboardHeading container">
+            <div className="dashboardHeading">
               <h1>Welcome!</h1>
               <div className="div">
                 <p>
@@ -45,7 +50,7 @@ const Dashboard = () => {
               </div>
               <h2>$2,280</h2>
             </div>
-            <div className="dashboardReview container">
+            <div className="dashboardReview">
               <div className="dashboardReviewScore">
                 <h3>Review score</h3>
                 <h5 className="review">
@@ -61,19 +66,19 @@ const Dashboard = () => {
                 Details
               </button>
             </div>
-            <div className="dashboardListedVans container">
+            <div className="dashboardListedVans">
               <h3>Your listed vans</h3>
               <button
                 className="errorBtn"
                 onClick={() => {
-                  window.location.href = "/Host/Vans";
+                  window.location.href = "/";
                 }}
               >
                 View all
               </button>
             </div>
-            {vans.map((van, index) => (
-              <div className="dashboardVan" key={Math.random()}>
+            {vans.map((van) => (
+              <div key={van.id} className="dashboardVan">  {/* Added key prop */}
                 <div className="dashboardPictureDetails">
                   <img
                     src={van.image}
@@ -81,7 +86,7 @@ const Dashboard = () => {
                     className="dashboardImages"
                   />
                   <div className="dashboardVanDetails">
-                    <h3>{van.name}</h3>
+                    <h4>{van.name}</h4>
                     <p>{van.price}</p>
                   </div>
                 </div>
@@ -93,6 +98,6 @@ const Dashboard = () => {
       </main>
     </div>
   );
-}
+};
 
-export default Dashboard
+export default Dashboard;

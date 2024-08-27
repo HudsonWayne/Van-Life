@@ -19,7 +19,7 @@ const Error = () => {
         </div>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Error
+export default Error;
