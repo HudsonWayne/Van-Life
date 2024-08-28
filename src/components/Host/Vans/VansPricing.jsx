@@ -1,61 +1,73 @@
 
 import image from "../../../assets/Modest_Explorer rent.jpg";
-import "./VansPricing.css"
+import HostNavbar from "../HostNavbar";
+import "./VansPricing.css";
+import VansHome from "./VansHome";
+import Navbar from "../HostNavbar";
 import { Link } from "react-router-dom";
+import Simple from "../../../assets/Modest_Explorer rent.jpg";
+import Beach from "../../../assets/Beach_Bum.jpg";
+import Reliable from "../../../assets/Reliable_Red.jpg";
 
 const VansPricing = () => {
+ 
+
   return (
-<div className="container">
-        <div className="link">
-            <li><Link to='./Dashboard'>Dashboard</Link></li>
-            <li><Link to='./Income'>Income</Link></li>
-            <li><Link to='./Vans'>Vans</Link></li>
-            <li><Link to='./Reviews'>Reviews</Link></li>
-          
-        </div>
-        <div className="back">
-          <a href="">Back to all vans</a>
-        </div>
+    <div className="container">
+      <HostNavbar />
 
-        <div className="van-card">
-          <div className=" image-text ">
-            <div className="container">
-              <div className="row">
-                <div className="first">
-                  <div className="image-container col-md-6">
-                      {/* <img src="./image/Rectangle 162.png" alt=""> */}
-                    <img src={image} alt="Car" /> 
-                  </div>
-                  <div className="text-container col-md-6">
-                    <button>Simple</button>
+      <div className="back">
+        <li>
+          <Link to="/Vans">Back to all vans</Link>
+        </li>
+      </div>
 
-                    <h2 className="text">Modest Explorer</h2>
-                    <p>
-                      <span>$60</span>/day
-                    </p>
-                  </div>
+      <div className="van-card">
+        <div className="image-text">
+          <div className="container">
+            <div className="row">
+              <div className="first">
+                <div className="image-container col-md-6">
+                  <img key={van.id} src={van.image} alt="Modest Explorer" />
                 </div>
-
+                <div className="text-container col-md-6">
+                  <button className="bnt9" key={van.id}>
+                    {van.category}
+                  </button>
+                  <h2 key={van.id}>{van.name}</h2>
+                  <p>
+                    <span key={van.id}>{van.price}</span>/day
+                  </p>
+                </div>
               </div>
-              <div className="photos-section">
-                
-                <ul>
-                  <a href="" className
-                  ="dd">
+            </div>
+            <div className="photos-section">
+              <ul>
+                <li>
+                  <Link to="/VansDetails" className="dd">
                     Details
-                  </a>
-                  <a href="" className="price">Pricing</a>
-                  <a href="">Photos</a>
-                </ul>
-                <div className="prices-tag">
-                    
-                   <h2><span>$60</span>/day</h2>
-                </div>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/VansPricing" className="price">
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/VansPhotos">Photos</Link>
+                </li>
+              </ul>
+              <div className="prices-tag">
+                <h2>
+                  <span key={van.id}>${van.price}</span>
+                  /day
+                </h2>
               </div>
             </div>
           </div>
         </div>
-      </div> 
+      </div>
+    </div>
   );
 };
 

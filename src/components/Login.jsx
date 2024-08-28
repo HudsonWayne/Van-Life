@@ -1,11 +1,9 @@
 import { useState } from "react";
-// import {useHistory} from "react-router-dom"
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  // const history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -23,11 +21,11 @@ const Login = () => {
       return;
     }
     if (!/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password)) {
-      setErrorMessage("Password must contain special character");
+      setErrorMessage("Password must contain a special character");
       return;
     }
 
-    history.push(window.location.href = "/Vans");
+    history.push((window.location.href ="/Vans"));
   };
 
   return (
