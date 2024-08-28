@@ -4,7 +4,7 @@ const Vans = ({ vans }) => {
       id: 1,
       name: "Modest Explorer",
       price: 60,
-      image: "../assets/Beach_Bum photos.jpg", // Replace with actual image paths
+      image: "../assets/Beach_Bum photos.jpg", 
     },
     {
       id: 2,
